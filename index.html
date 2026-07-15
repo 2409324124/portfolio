@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#070b12" />
+    <meta
+      name="description"
+      content="东云 / Shinonome 的工程作品集：AI Agent、模型适配、计算心理学、编程可视化与可运行实验。"
+    />
+    <meta property="og:title" content="东云 / Shinonome — Work Index" />
+    <meta
+      property="og:description"
+      content="把模型、工具和真实世界接起来。查看 AI Agent、机器学习与交互实验。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio.shinonome.xyz/" />
+    <title>东云 / Shinonome — 作品集</title>
+    <script>document.documentElement.classList.add("js")</script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#work">跳到作品列表</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="https://shinonome.xyz/" aria-label="返回 Shinonome 首页">
+        <span>東雲</span><strong>SHINONOME</strong>
+      </a>
+      <nav aria-label="主导航">
+        <a href="#selected">精选</a>
+        <a href="#work">索引</a>
+        <a href="#about">关于</a>
+        <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-blueprint" aria-hidden="true">
+          <img src="./assets/seq2seq-architecture.png" alt="" />
+        </div>
+        <div class="hero-copy">
+          <p class="kicker"><span>Portfolio / 2026</span><span>Shanghai · UTC+8</span></p>
+          <h1 id="hero-title">把模型、工具和<br />真实世界接起来。</h1>
+          <p class="hero-intro">
+            我是东云。关注 Coding Agent、Agent Harness 与可解释的机器学习系统；偏爱把研究笔记变成能运行、能测试、能部署的产品。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#selected">浏览精选作品 <span>↓</span></a>
+            <a href="mailto:jzhou2409324124@gmail.com">联系我 ↗</a>
+          </div>
+        </div>
+        <div class="hero-index" aria-label="作品集摘要">
+          <span>01 / Agent systems</span>
+          <span>02 / ML &amp; research</span>
+          <span>03 / Interactive experiments</span>
+        </div>
+      </section>
+
+      <section class="manifesto reveal" aria-label="工作方式">
+        <p>RESEARCH → HARNESS → PRODUCT</p>
+        <blockquote>不只展示结果，也展示边界、评测、失败恢复和系统真正跑起来的路径。</blockquote>
+      </section>
+
+      <section class="selected section-shell" id="selected" aria-labelledby="selected-title">
+        <header class="section-heading reveal">
+          <p>Selected work</p>
+          <h2 id="selected-title">四个正在生长的系统</h2>
+        </header>
+
+        <article class="feature feature-wide reveal">
+          <div class="feature-number">01</div>
+          <div class="feature-copy">
+            <p class="project-kind">Agent Harness · Human-in-the-loop</p>
+            <h3>JobHunter Agent Harness</h3>
+            <p>
+              围绕持久候选人记忆、职位采集、结构化排序、申请材料草拟与评测构建的求职 Agent。所有外部动作都停在人工批准边界之前。
+            </p>
+            <ul class="inline-facts" aria-label="项目要点">
+              <li>Multi-agent orchestration</li><li>SQLite memory</li><li>50-job benchmark</li>
+            </ul>
+          </div>
+          <a class="project-action" href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">Repository ↗</a>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature-number">02</div>
+          <div class="feature-copy">
+            <p class="project-kind">Protocol Adapter · Tool Calling</p>
+            <h3>DeepSeek Codex Adapter</h3>
+            <p>
+              在 OpenAI Responses 与 DeepSeek Chat Completions 之间完成流式事件、并行工具调用和多轮上下文转换，并提供受限 MCP 扫描与补丁工作流。
+            </p>
+            <ul class="inline-facts"><li>Responses SSE</li><li>Parallel tools</li><li>Patch validation</li></ul>
+          </div>
+          <a class="project-action" href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">Repository ↗</a>
+        </article>
+
+        <article class="feature feature-media reveal">
+          <div class="media-frame">
+            <img src="./assets/attention-heatmap.jpg" alt="Seq2Seq 模型在德语到英语翻译中的注意力热力图" loading="lazy" />
+          </div>
+          <div class="feature-number">03</div>
+          <div class="feature-copy">
+            <p class="project-kind">Learning Tool · Trace Visualization</p>
+            <h3>Programming Visualization</h3>
+            <p>把双指针、递归栈、DP 表格与图搜索的执行轨迹变成可回放的可视化故事，为非科班学习者解释“代码为什么这样动”。</p>
+          </div>
+          <div class="project-actions">
+            <a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Live gallery ↗</a>
+            <a href="https://github.com/2409324124/programming-visualization" target="_blank" rel="noreferrer">Repository ↗</a>
+          </div>
+        </article>
+
+        <article class="feature feature-stat reveal">
+          <div class="feature-number">04</div>
+          <div class="feature-copy">
+            <p class="project-kind">SFT · Evaluation</p>
+            <h3>Qwen3 4B LaTeX Correction</h3>
+            <p>面向噪声数学描述到规范 LaTeX 的 LoRA SFT。重点不只在训练，还包括 AST 级评测、格式一致性与通用能力保留检查。</p>
+          </div>
+          <div class="big-stat"><strong>98.97%</strong><span>固定评测集 math accuracy<br />292 examples · repository report</span></div>
+          <a class="project-action" href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">Read the report ↗</a>
+        </article>
+      </section>
+
+      <section class="work-index section-shell" id="work" aria-labelledby="work-title">
+        <header class="section-heading reveal">
+          <p>Project index</p>
+          <h2 id="work-title">公开项目与可运行实验</h2>
+        </header>
+        <div class="filters reveal" role="group" aria-label="筛选项目">
+          <button class="active" type="button" data-filter="all" aria-pressed="true">全部 <span>15</span></button>
+          <button type="button" data-filter="agent" aria-pressed="false">Agent 系统 <span>5</span></button>
+          <button type="button" data-filter="research" aria-pressed="false">模型与研究 <span>6</span></button>
+          <button type="button" data-filter="interactive" aria-pressed="false">交互与制造 <span>4</span></button>
+        </div>
+
+        <div class="project-list">
+          <a class="project-row reveal" data-category="agent" href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer"><span class="row-number">01</span><span class="row-title">JobHunter Agent Harness</span><span class="row-desc">求职采集、排序、材料与评测闭环</span><span class="row-tech">Python · FastAPI</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="agent" href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer"><span class="row-number">02</span><span class="row-title">DeepSeek Codex Adapter</span><span class="row-desc">Responses 兼容层与受限 MCP driver</span><span class="row-tech">Protocol · SSE</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="agent" href="https://github.com/2409324124/claude-code-multi-provider-skill" target="_blank" rel="noreferrer"><span class="row-number">03</span><span class="row-title">Claude Multi-provider Router</span><span class="row-desc">分层路由、fallback 与 cooldown</span><span class="row-tech">Router · Skill</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="agent" href="https://github.com/2409324124/-agent-" target="_blank" rel="noreferrer"><span class="row-number">04</span><span class="row-title">Modern Agent Source Studies</span><span class="row-desc">现代 Agent 工具调用链路研究</span><span class="row-tech">Source study</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="agent" href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer"><span class="row-number">05</span><span class="row-title">PrepLoop</span><span class="row-desc">知识感知的每日间隔复习系统</span><span class="row-tech">FastAPI · React</span><span class="row-arrow">Live ↗</span></a>
+
+          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer"><span class="row-number">06</span><span class="row-title">Qwen3 LaTeX Correction SFT</span><span class="row-desc">LoRA 训练与结构化数学评测</span><span class="row-tech">Qwen · LoRA</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/seq2seq-nmt-from-scratch" target="_blank" rel="noreferrer"><span class="row-number">07</span><span class="row-title">Seq2Seq NMT from Scratch</span><span class="row-desc">LSTM、Bahdanau Attention 与 BLEU 评测</span><span class="row-tech">PyTorch · BLEU 56.3</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/riichi-mahjong-recognition" target="_blank" rel="noreferrer"><span class="row-number">08</span><span class="row-title">Riichi Mahjong Recognition</span><span class="row-desc">牌面识别、和牌验证与牌效分析</span><span class="row-tech">YOLOv8 · OpenCV</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="research" href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer"><span class="row-number">09</span><span class="row-title">CAT-Psych</span><span class="row-desc">自适应选题与计算心理学原型</span><span class="row-tech">MIRT · CAT</span><span class="row-arrow">Live ↗</span></a>
+          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/xeon-max-9470c-benchmarks" target="_blank" rel="noreferrer"><span class="row-number">10</span><span class="row-title">Xeon Max 9470C Benchmarks</span><span class="row-desc">52 核与 64GB HBM2e 的交互报告</span><span class="row-tech">HBM · HPC</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/kaggle" target="_blank" rel="noreferrer"><span class="row-number">11</span><span class="row-title">Kaggle Experiments</span><span class="row-desc">表格学习、特征工程与实验记录</span><span class="row-tech">ML · Evaluation</span><span class="row-arrow">↗</span></a>
+
+          <a class="project-row reveal" data-category="interactive" href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer"><span class="row-number">12</span><span class="row-title">Programming Visualization</span><span class="row-desc">算法执行轨迹与故事式回放</span><span class="row-tech">Trace · HTML</span><span class="row-arrow">Live ↗</span></a>
+          <a class="project-row reveal" data-category="interactive" href="https://github.com/2409324124/chatgpt-icon-cad" target="_blank" rel="noreferrer"><span class="row-number">13</span><span class="row-title">Parametric Icon CAD</span><span class="row-desc">可打印参数化模型与浏览器预览</span><span class="row-tech">CadQuery · STL</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="interactive" href="https://github.com/2409324124/omsk-elevator" target="_blank" rel="noreferrer"><span class="row-number">14</span><span class="row-title">Elevator Down</span><span class="row-desc">心理量表驱动的自适应视觉小说</span><span class="row-tech">Narrative system</span><span class="row-arrow">↗</span></a>
+          <a class="project-row reveal" data-category="interactive" href="https://github.com/2409324124/ai-3d-print-pipeline" target="_blank" rel="noreferrer"><span class="row-number">15</span><span class="row-title">AI 3D Print Pipeline</span><span class="row-desc">从生成设计到可制造对象的实验</span><span class="row-tech">AI · Fabrication</span><span class="row-arrow">↗</span></a>
+        </div>
+        <p class="empty-filter" hidden>这个分类暂时没有公开项目。</p>
+      </section>
+
+      <section class="artifact section-shell reveal" aria-labelledby="artifact-title">
+        <div class="artifact-copy">
+          <p>Physical artifact</p>
+          <h2 id="artifact-title">代码最后也可以落到手里。</h2>
+          <p>参数化 CAD、自动导出 STL/STEP、浏览器 3D 预览与形状相似度检查，让生成式设计离可制造结果更近一步。</p>
+          <a href="https://github.com/2409324124/chatgpt-icon-cad" target="_blank" rel="noreferrer">查看 CAD pipeline ↗</a>
+        </div>
+        <div class="artifact-image"><img src="./assets/cad-preview.png" alt="参数化 CAD 图标的俯视预览" loading="lazy" /></div>
+      </section>
+
+      <section class="about section-shell" id="about" aria-labelledby="about-title">
+        <header class="section-heading reveal">
+          <p>About</p>
+          <h2 id="about-title">独立研究者，产品工程实践者。</h2>
+        </header>
+        <div class="about-grid reveal">
+          <p>
+            我关心模型怎样穿过 provider、router、tool schema、权限边界、sandbox、日志和评测，最终成为一个可信的工作系统。非传统 CS 路径让我更在意技术与人的真实交互，以及“能否长期使用”而不只是 demo 是否漂亮。
+          </p>
+          <dl>
+            <div><dt>Name</dt><dd>Xu Jianzhou / 东云</dd></div>
+            <div><dt>Research</dt><dd>Mathematical NLP · Small models · Structured evaluation</dd></div>
+            <div><dt>Engineering</dt><dd>Agent Harness · FastAPI · React · Docker</dd></div>
+            <div><dt>Open identity</dt><dd><a href="https://orcid.org/0009-0008-6625-0148" target="_blank" rel="noreferrer">ORCID 0009-0008-6625-0148 ↗</a></dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="closing">
+        <p>Build small. Test the boundary. Ship the real thing.</p>
+        <a href="mailto:jzhou2409324124@gmail.com">jzhou2409324124@gmail.com ↗</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 东云 / Shinonome</span>
+      <a href="https://shinonome.xyz/">返回个人首页 ↑</a>
+    </footer>
+  </body>
+</html>
