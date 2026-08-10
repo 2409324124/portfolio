@@ -3,198 +3,300 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#070b12" />
-    <meta
-      name="description"
-      content="连接真实世界。东云 / Shinonome 关于 Coding Agent、深度学习与交互实验的工程作品集。"
-    />
-    <meta property="og:title" content="东云 / Shinonome — Work Index" />
-    <meta
-      property="og:description"
-      content="连接真实世界。查看 Coding Agent、深度学习与交互实验。"
-    />
+    <meta name="theme-color" content="#d4d4d4" />
+    <meta name="description" content="Shinonome Network：东云的个人研究、工程项目与 Benchmark 档案。" />
+    <meta property="og:title" content="SHINONOME NETWORK" />
+    <meta property="og:description" content="Personal Research &amp; Engineering Archive" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portfolio.shinonome.xyz/" />
-    <title>东云 / Shinonome — 作品集</title>
-    <script>document.documentElement.classList.add("js")</script>
+    <title>SHINONOME NETWORK — Personal Research &amp; Engineering Archive</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
   </head>
-  <body>
-    <a class="skip-link" href="#work">跳到作品列表</a>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
-      <a class="wordmark" href="https://shinonome.xyz/" aria-label="返回 Shinonome 首页">
-        <span>東雲</span><strong>SHINONOME</strong>
-      </a>
-      <nav aria-label="主导航">
-        <a href="#selected">精选</a>
-        <a href="#work">索引</a>
-        <a href="#about">关于</a>
-        <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-blueprint" aria-hidden="true">
-          <img src="./assets/seq2seq-architecture.png" alt="" />
+    <div class="archive-shell">
+      <header class="archive-header">
+        <div class="masthead">
+          <h1>SHINONOME NETWORK</h1>
+          <strong class="online-indicator">[ONLINE]</strong>
         </div>
-        <div class="hero-copy">
-          <p class="kicker"><span>Portfolio / 2026</span><span>Shanghai · UTC+8</span></p>
-          <h1 id="hero-title">连接<br />真实世界</h1>
-          <p class="hero-intro">
-            我是东云，关注 Coding Agent <span class="no-wrap">与深度学习。</span><br />
-            让我们将虚拟世界与真实世界 <strong>Link Start！</strong>
-          </p>
-          <div class="hero-actions">
-            <a class="primary-action" href="#selected">浏览精选作品 <span>↓</span></a>
-            <a href="mailto:jzhou2409324124@gmail.com">联系我 ↗</a>
+        <p class="archive-subtitle"><b>東雲</b> Personal Research &amp; Engineering Archive</p>
+        <nav class="archive-nav" aria-label="Primary navigation">
+          <a href="#top">Home</a><span aria-hidden="true">|</span>
+          <a href="#projects">Live Systems</a><span aria-hidden="true">|</span>
+          <a href="#source-research">Source &amp; Research</a><span aria-hidden="true">|</span>
+          <a href="#project-index">Project Index</a><span aria-hidden="true">|</span>
+          <a href="#about">About</a><span aria-hidden="true">|</span>
+          <a href="#links">Links</a>
+        </nav>
+      </header>
+
+      <div class="portal-grid">
+        <aside class="sidebar" aria-label="Site information">
+          <section class="portal-panel directory-panel">
+            <h2 class="panel-title">SITE DIRECTORY</h2>
+            <div class="panel-body directory-tree">
+              <details open>
+                <summary><span class="pixel-icon folder-icon" aria-hidden="true"></span>Live Systems</summary>
+                <a href="#cat-psych"><span class="pixel-icon folder-icon" aria-hidden="true"></span>CAT-Psych</a>
+                <a href="#interactive"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Programming</a>
+                <a href="#prep-loop"><span class="pixel-icon folder-icon" aria-hidden="true"></span>PrepLoop</a>
+                <a href="#hardware"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Xeon Report</a>
+              </details>
+              <details open>
+                <summary><span class="pixel-icon folder-icon" aria-hidden="true"></span>Source &amp; Research</summary>
+                <a href="#agent-systems"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Agent Systems</a>
+                <a href="#machine-learning"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Model Evaluation</a>
+                <a href="#jobhunter"><span class="pixel-icon folder-icon" aria-hidden="true"></span>JobHunter</a>
+                <a href="#claude-router"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Provider Router</a>
+              </details>
+              <a href="#project-index"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Project Index</a>
+              <a href="#about"><span class="pixel-icon user-icon" aria-hidden="true"></span>About Me</a>
+              <a href="#links"><span class="pixel-icon network-icon" aria-hidden="true"></span>Links</a>
+            </div>
+          </section>
+
+          <section class="portal-panel status-panel">
+            <h2 class="panel-title panel-title-teal">SITE STATUS</h2>
+            <div class="panel-body compact-list">
+              <p><span class="pixel-icon calendar-icon" aria-hidden="true"></span>Last updated: <time datetime="2026-08-10">2026/08/10</time></p>
+              <p><span class="pixel-icon computer-icon" aria-hidden="true"></span>Best viewed at 1024 × 768</p>
+              <p><span class="status-lamp" aria-hidden="true"></span>Status: <strong class="status-online">ONLINE</strong></p>
+              <p>Hosted by GitHub Pages</p>
+            </div>
+          </section>
+
+          <section class="portal-panel system-panel">
+            <h2 class="panel-title panel-title-teal">SYSTEM INFO</h2>
+            <div class="panel-body system-info">
+              <span class="pixel-computer" aria-hidden="true"></span>
+              <dl>
+                <div><dt>Archive:</dt><dd>SHINONOME-1</dd></div>
+                <div><dt>Platform:</dt><dd>Static HTML</dd></div>
+                <div><dt>Mode:</dt><dd>No framework</dd></div>
+                <div><dt>Time:</dt><dd id="local-time">--:--</dd></div>
+              </dl>
+            </div>
+          </section>
+
+          <section class="portal-panel" id="links">
+            <h2 class="panel-title panel-title-teal">QUICK LINKS</h2>
+            <div class="panel-body quick-links">
+              <a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">Start CAT-Psych</a>
+              <a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Programming Demo</a>
+              <a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">Open PrepLoop</a>
+              <a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/" target="_blank" rel="noreferrer">Xeon Report</a>
+              <a href="#project-index">Project Index</a>
+              <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">Source Code (GitHub)</a>
+              <a href="mailto:jzhou2409324124@gmail.com">Email Webmaster</a>
+            </div>
+          </section>
+
+          <section class="portal-panel supported-panel">
+            <h2 class="panel-title">SUPPORTED BY</h2>
+            <div class="panel-body support-badges">
+              <span class="support-badge"><b>HTML</b><small>4.01</small></span>
+              <span class="support-badge"><b>CSS</b><small>STYLES</small></span>
+              <span class="support-badge"><b>LINUX</b><small>POWERED</small></span>
+              <span class="support-badge"><b>GITHUB</b><small>PAGES</small></span>
+            </div>
+          </section>
+        </aside>
+
+        <main id="main-content" class="main-column">
+          <section class="portal-panel welcome-panel">
+            <h2 class="panel-title">WELCOME TO SHINONOME NETWORK</h2>
+            <div class="panel-body">
+              <p class="welcome-index"><b>Agent systems · Machine learning · Runtime · Hardware experiments</b></p>
+              <p>这里是东云的软件、实验、研究笔记、Benchmark 与技术写作档案。</p>
+            </div>
+          </section>
+
+          <section class="portal-panel featured-panel" id="projects">
+            <h2 class="panel-title">LIVE SYSTEMS / TRY IT</h2>
+            <div class="live-systems">
+              <article class="live-entry live-cat" id="cat-psych">
+                <header class="live-entry-header">
+                  <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">CAT-Psych</a></h3>
+                  <em class="project-status active">[ONLINE]</em>
+                </header>
+                <div class="live-cat-grid">
+                  <div class="live-copy">
+                    <p class="live-subtitle"><b>Adaptive Big Five Personality Assessment</b></p>
+                    <ul>
+                      <li>MIRT / CAT adaptive item selection</li>
+                      <li>50-item Big Five starter bank</li>
+                      <li>Early stop and stability checks</li>
+                      <li>Result report and shareable result page</li>
+                      <li>Chinese-first questionnaire</li>
+                    </ul>
+                    <p class="entry-links"><a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">[START TEST]</a> <a href="https://github.com/2409324124/adaptive_psych_system/blob/main/README.md" target="_blank" rel="noreferrer">[ABOUT]</a> <a href="https://github.com/2409324124/adaptive_psych_system" target="_blank" rel="noreferrer">[SOURCE]</a></p>
+                  </div>
+                  <figure class="live-preview live-preview-large">
+                    <img src="./assets/cat-psych-live.png" alt="CAT-Psych 自适应心理测评公开界面" />
+                    <figcaption>Public assessment interface</figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <div class="live-secondary-grid">
+                <article class="live-entry" id="interactive">
+                  <header class="live-entry-header">
+                    <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Programming Visualization</a></h3>
+                    <em class="project-status demo">[DEMO]</em>
+                  </header>
+                  <figure class="live-preview">
+                    <img src="./assets/programming-runtime.png" alt="Programming Visualization Runtime Execution Viewer，显示调用栈、变量和执行步骤" />
+                  </figure>
+                  <p class="live-subtitle"><b>LeetCode-style Programming Visualization</b></p>
+                  <ul>
+                    <li>Step through algorithm execution</li>
+                    <li>Arrays / Hash Maps / Linked Lists / DP</li>
+                    <li>Variable and call-stack state</li>
+                    <li>Interactive demo gallery</li>
+                  </ul>
+                  <p class="entry-links"><a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">[OPEN DEMO]</a> <a href="https://github.com/2409324124/programming-visualization" target="_blank" rel="noreferrer">[SOURCE]</a></p>
+                </article>
+
+                <article class="live-entry" id="prep-loop">
+                  <header class="live-entry-header">
+                    <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">PrepLoop</a></h3>
+                    <em class="project-status active">[ONLINE]</em>
+                  </header>
+                  <figure class="live-preview">
+                    <img src="./assets/preploop-live.png" alt="PrepLoop 每日复习队列界面" />
+                  </figure>
+                  <p class="live-subtitle"><b>Daily Spaced Review</b></p>
+                  <ul>
+                    <li>Algorithms / Agent Harness / System Design</li>
+                    <li>Again / Hard / Good / Easy</li>
+                    <li>Daily review queue</li>
+                    <li>History and weak-topic review</li>
+                  </ul>
+                  <p class="entry-links"><a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">[OPEN]</a></p>
+                </article>
+              </div>
+
+              <article class="live-entry live-report" id="hardware">
+                <div>
+                  <header class="live-entry-header">
+                    <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/" target="_blank" rel="noreferrer">Xeon Max 9470C Benchmarks</a></h3>
+                    <em class="project-status report">[REPORT]</em>
+                  </header>
+                  <p><b>52C / 104T · 64 GB HBM2e</b></p>
+                  <p>STREAM · oneDNN · OpenVINO · LLM inference · PyTorch · TensorFlow · HPC</p>
+                </div>
+                <p class="entry-links"><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/" target="_blank" rel="noreferrer">[OPEN REPORT]</a></p>
+              </article>
+            </div>
+          </section>
+
+          <section class="portal-panel source-panel" id="source-research">
+            <h2 class="panel-title">SOURCE &amp; RESEARCH</h2>
+            <div class="source-directory">
+              <article class="source-entry" id="agent-systems">
+                <span class="pixel-icon document-icon" aria-hidden="true"></span>
+                <div>
+                  <h3><a href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">DeepSeek Codex Adapter</a></h3>
+                  <p>Codex Responses ↔ DeepSeek compatibility layer</p>
+                  <p class="source-meta">SSE · Parallel Tool Calls · MCP edit workflow</p>
+                </div>
+                <p class="entry-links"><a href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">[SOURCE]</a> <a href="https://github.com/2409324124/deepseek-codex-adapter#readme" target="_blank" rel="noreferrer">[README]</a></p>
+              </article>
+
+              <article class="source-entry" id="machine-learning">
+                <span class="pixel-icon document-icon" aria-hidden="true"></span>
+                <div>
+                  <h3><a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">Qwen3 LaTeX Correction</a></h3>
+                  <p>Natural-language math → canonical LaTeX</p>
+                  <p class="source-meta">Qwen3-4B · LoRA SFT · 292 eval · 98.97% math · 83.22% exact</p>
+                </div>
+                <p class="entry-links"><a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic#readme" target="_blank" rel="noreferrer">[REPORT]</a> <a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">[SOURCE]</a></p>
+              </article>
+
+              <article class="source-entry" id="jobhunter">
+                <span class="pixel-icon document-icon" aria-hidden="true"></span>
+                <div>
+                  <h3><a href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">JobHunter Agent Harness</a></h3>
+                  <p>Job collection · ranking · candidate memory · human approval</p>
+                </div>
+                <p class="entry-links"><a href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">[SOURCE]</a></p>
+              </article>
+
+              <article class="source-entry" id="claude-router">
+                <span class="pixel-icon document-icon" aria-hidden="true"></span>
+                <div>
+                  <h3><a href="https://github.com/2409324124/claude-code-multi-provider-skill" target="_blank" rel="noreferrer">Claude Multi-Provider Router</a></h3>
+                  <p>Claude Code → GPT / DeepSeek / MiMo / Gemini</p>
+                  <p class="source-meta">Fallback · cooldown · diagnostics</p>
+                </div>
+                <p class="entry-links"><a href="https://github.com/2409324124/claude-code-multi-provider-skill" target="_blank" rel="noreferrer">[SOURCE]</a></p>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="lower-grid">
+        <section class="portal-panel project-index-panel" id="project-index">
+          <h2 class="panel-title">PROJECT INDEX</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>No.</th><th>Project</th><th>Category</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>01</td><td><a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">CAT-Psych</a></td><td>Application</td><td class="table-active">Online</td></tr>
+                <tr><td>02</td><td><a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Programming Visualization</a></td><td>Application</td><td class="table-active">Demo</td></tr>
+                <tr><td>03</td><td><a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">PrepLoop</a></td><td>Application</td><td class="table-active">Online</td></tr>
+                <tr><td>04</td><td><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/" target="_blank" rel="noreferrer">Xeon Max 9470C Benchmarks</a></td><td>Benchmark</td><td>Published</td></tr>
+                <tr><td>05</td><td><a href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">DeepSeek Codex Adapter</a></td><td>Agent</td><td>Source</td></tr>
+                <tr><td>06</td><td><a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">Qwen3 LaTeX Correction</a></td><td>ML</td><td>Report</td></tr>
+                <tr><td>07</td><td><a href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">JobHunter Agent Harness</a></td><td>Agent</td><td>Source</td></tr>
+                <tr><td>08</td><td><a href="https://github.com/2409324124/claude-code-multi-provider-skill" target="_blank" rel="noreferrer">Claude Multi-Provider Router</a></td><td>Agent</td><td>Source</td></tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-        <div class="hero-index" aria-label="作品集摘要">
-          <span>01 / Agent systems</span>
-          <span>02 / ML &amp; research</span>
-          <span>03 / Interactive experiments</span>
+        </section>
+
+      </div>
+
+      <section class="portal-panel about-panel" id="about">
+        <h2 class="panel-title">ABOUT THE WEBMASTER</h2>
+        <div class="panel-body about-grid">
+          <div class="about-block identity-block">
+            <span class="pixel-computer large" aria-hidden="true"></span>
+            <div><p><b>Name:</b> Xu Jianzhou / 东云</p><p><b>Interests:</b><br />Agent systems · Machine learning · Computer hardware · Psychology</p></div>
+          </div>
+          <div class="about-block writing-block">
+            <span class="book-icon" aria-hidden="true">▥</span>
+            <div><p><b>Writing / Research:</b></p><p>《我是21世纪的精神病人》</p><p><a href="https://osf.io/preprints/socarxiv/xhky9_v1" target="_blank" rel="noreferrer">[READ PREPRINT]</a></p></div>
+          </div>
+          <div class="about-block workstation-block">
+            <span class="chip-icon" aria-hidden="true">▦</span>
+            <div><p><b>Current workstation:</b></p><p>Intel Xeon CPU Max 9470C<br />52C / 104T · 64 GB HBM2e</p><p><a href="#hardware">[SYSTEM INFO]</a></p></div>
+          </div>
         </div>
       </section>
 
-      <section class="manifesto reveal" aria-label="工作方式">
-        <p>RESEARCH → HARNESS → PRODUCT</p>
-        <blockquote>你能从历史中学到很多东西：毁灭、重建、繁荣，再毁灭……失败并不可怕，这世界上不存在一次就能跑通的系统。</blockquote>
-      </section>
+      <div class="web-buttons" aria-label="Site badges">
+        <a href="#top">SHINONOME<br /><b>NETWORK</b></a>
+        <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">OPEN<br /><b>SOURCE</b></a>
+        <a href="#hardware">X86 / HBM<br /><b>PERFORMANCE</b></a>
+        <a href="https://github.com/2409324124/portfolio" target="_blank" rel="noreferrer">&lt;/&gt;<br /><b>VIEW SOURCE</b></a>
+        <a href="#top">BEST VIEWED<br /><b>1024 × 768</b></a>
+      </div>
 
-      <section class="selected section-shell" id="selected" aria-labelledby="selected-title">
-        <header class="section-heading reveal">
-          <p>Selected work</p>
-          <h2 id="selected-title">四个正在生长的系统</h2>
-        </header>
-
-        <article class="feature feature-wide reveal">
-          <div class="feature-number">01</div>
-          <div class="feature-copy">
-            <p class="project-kind">Agent Harness · Human-in-the-loop</p>
-            <h3>JobHunter Agent Harness</h3>
-            <p>
-              基于 BOSS 直聘 JD 抓取、分析与简历修改构建的求职 Agent。
-            </p>
-            <ul class="inline-facts" aria-label="项目要点">
-              <li>JD crawling</li><li>Job analysis</li><li>Resume rewriting</li>
-            </ul>
-          </div>
-          <a class="project-action" href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">Repository ↗</a>
-        </article>
-
-        <article class="feature reveal">
-          <div class="feature-number">02</div>
-          <div class="feature-copy">
-            <p class="project-kind">Protocol Adapter · Tool Calling</p>
-            <h3>DeepSeek Codex Adapter</h3>
-            <p>
-              在 OpenAI Responses 与 DeepSeek Chat Completions 之间完成流式事件、并行工具调用和多轮上下文转换，并提供受限 MCP 扫描与补丁工作流。
-            </p>
-            <ul class="inline-facts"><li>Responses SSE</li><li>Parallel tools</li><li>Patch validation</li></ul>
-          </div>
-          <a class="project-action" href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">Repository ↗</a>
-        </article>
-
-        <article class="feature feature-media reveal">
-          <div class="media-frame">
-            <img class="runtime-shot" src="./assets/programming-runtime.png" alt="Programming Visualization 的 Runtime Execution Viewer，展示 NumPy 代码、执行步骤与返回值" loading="lazy" />
-          </div>
-          <div class="feature-number">03</div>
-          <div class="feature-copy">
-            <p class="project-kind">Runtime · Execution Trace</p>
-            <h3>Programming Visualization</h3>
-            <p>面向程序执行过程的 Runtime 可视化：把代码行、变量状态、调用栈和数据结构变化转换为可回放轨迹。</p>
-          </div>
-          <div class="project-actions">
-            <a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Live gallery ↗</a>
-            <a href="https://github.com/2409324124/programming-visualization" target="_blank" rel="noreferrer">Repository ↗</a>
-          </div>
-        </article>
-
-        <article class="feature feature-stat reveal">
-          <div class="feature-number">04</div>
-          <div class="feature-copy">
-            <p class="project-kind">SFT · Evaluation</p>
-            <h3>Qwen3 4B LaTeX Correction</h3>
-            <p>面向噪声数学描述到规范 LaTeX 的 LoRA SFT。重点不只在训练，还包括 AST 级评测、格式一致性与通用能力保留检查。</p>
-          </div>
-          <div class="big-stat"><strong>98.97%</strong><span>固定评测集 math accuracy<br />292 examples · repository report</span></div>
-          <a class="project-action" href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">Read the report ↗</a>
-        </article>
-      </section>
-
-      <section class="work-index section-shell" id="work" aria-labelledby="work-title">
-        <header class="section-heading reveal">
-          <p>Project index</p>
-          <h2 id="work-title">公开项目与可运行实验</h2>
-        </header>
-        <div class="filters reveal" role="group" aria-label="筛选项目">
-          <button class="active" type="button" data-filter="all" aria-pressed="true">全部 <span>15</span></button>
-          <button type="button" data-filter="agent" aria-pressed="false">Agent 系统 <span>5</span></button>
-          <button type="button" data-filter="research" aria-pressed="false">模型与研究 <span>6</span></button>
-          <button type="button" data-filter="interactive" aria-pressed="false">交互与制造 <span>4</span></button>
-        </div>
-
-        <div class="project-list">
-          <a class="project-row reveal" data-category="agent" href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer"><span class="row-number">01</span><span class="row-title">JobHunter Agent Harness</span><span class="row-desc">BOSS 直聘 JD 抓取、分析与简历修改</span><span class="row-tech">Python · FastAPI</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="agent" href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer"><span class="row-number">02</span><span class="row-title">DeepSeek Codex Adapter</span><span class="row-desc">Responses 兼容层与受限 MCP driver</span><span class="row-tech">Protocol · SSE</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="agent" href="https://github.com/2409324124/claude-code-multi-provider-skill" target="_blank" rel="noreferrer"><span class="row-number">03</span><span class="row-title">Claude Multi-provider Router</span><span class="row-desc">分层路由、fallback 与 cooldown</span><span class="row-tech">Router · Skill</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="agent" href="https://github.com/2409324124/-agent-" target="_blank" rel="noreferrer"><span class="row-number">04</span><span class="row-title">Modern Agent Source Studies</span><span class="row-desc">现代 Agent 工具调用链路研究</span><span class="row-tech">Source study</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="agent" href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer"><span class="row-number">05</span><span class="row-title">PrepLoop</span><span class="row-desc">知识感知的每日间隔复习系统</span><span class="row-tech">FastAPI · React</span><span class="row-arrow">Live ↗</span></a>
-
-          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer"><span class="row-number">06</span><span class="row-title">Qwen3 LaTeX Correction SFT</span><span class="row-desc">LoRA 训练与结构化数学评测</span><span class="row-tech">Qwen · LoRA</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/seq2seq-nmt-from-scratch" target="_blank" rel="noreferrer"><span class="row-number">07</span><span class="row-title">Seq2Seq NMT from Scratch</span><span class="row-desc">LSTM、Bahdanau Attention 与 BLEU 评测</span><span class="row-tech">PyTorch · BLEU 56.3</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/riichi-mahjong-recognition" target="_blank" rel="noreferrer"><span class="row-number">08</span><span class="row-title">Riichi Mahjong Recognition</span><span class="row-desc">牌面识别、和牌验证与牌效分析</span><span class="row-tech">YOLOv8 · OpenCV</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="research" href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer"><span class="row-number">09</span><span class="row-title">CAT-Psych</span><span class="row-desc">自适应选题与计算心理学原型</span><span class="row-tech">MIRT · CAT</span><span class="row-arrow">Live ↗</span></a>
-          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/xeon-max-9470c-benchmarks" target="_blank" rel="noreferrer"><span class="row-number">10</span><span class="row-title">Xeon Max 9470C Benchmarks</span><span class="row-desc">52 核与 64GB HBM2e 的交互报告</span><span class="row-tech">HBM · HPC</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="research" href="https://github.com/2409324124/kaggle" target="_blank" rel="noreferrer"><span class="row-number">11</span><span class="row-title">Kaggle Experiments</span><span class="row-desc">表格学习、特征工程与实验记录</span><span class="row-tech">ML · Evaluation</span><span class="row-arrow">↗</span></a>
-
-          <a class="project-row reveal" data-category="interactive" href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer"><span class="row-number">12</span><span class="row-title">Programming Visualization</span><span class="row-desc">程序 Runtime 执行轨迹可视化</span><span class="row-tech">Trace · HTML</span><span class="row-arrow">Live ↗</span></a>
-          <a class="project-row reveal" data-category="interactive" href="https://github.com/2409324124/chatgpt-icon-cad" target="_blank" rel="noreferrer"><span class="row-number">13</span><span class="row-title">Parametric Icon CAD</span><span class="row-desc">可打印参数化模型与浏览器预览</span><span class="row-tech">CadQuery · STL</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="interactive" href="https://github.com/2409324124/omsk-elevator" target="_blank" rel="noreferrer"><span class="row-number">14</span><span class="row-title">Elevator Down</span><span class="row-desc">心理量表驱动的自适应视觉小说</span><span class="row-tech">Narrative system</span><span class="row-arrow">↗</span></a>
-          <a class="project-row reveal" data-category="interactive" href="https://github.com/2409324124/ai-3d-print-pipeline" target="_blank" rel="noreferrer"><span class="row-number">15</span><span class="row-title">AI 3D Print Pipeline</span><span class="row-desc">从生成设计到可制造对象的实验</span><span class="row-tech">AI · Fabrication</span><span class="row-arrow">↗</span></a>
-        </div>
-        <p class="empty-filter" hidden>这个分类暂时没有公开项目。</p>
-      </section>
-
-      <section class="artifact section-shell reveal" aria-labelledby="artifact-title">
-        <div class="artifact-copy">
-          <p>Codex · Parametric CAD</p>
-          <h2 id="artifact-title">Codex 实现自动建模工作流</h2>
-          <p>参数化 CAD、自动导出 STL/STEP、浏览器 3D 预览与形状相似度检查，让生成式设计离可制造结果更近一步。</p>
-          <a href="https://github.com/2409324124/chatgpt-icon-cad" target="_blank" rel="noreferrer">查看 CAD pipeline ↗</a>
-        </div>
-        <div class="artifact-image"><img src="./assets/cad-preview.png" alt="参数化 CAD 图标的俯视预览" loading="lazy" /></div>
-      </section>
-
-      <section class="about section-shell" id="about" aria-labelledby="about-title">
-        <header class="section-heading reveal">
-          <p>About</p>
-          <h2 id="about-title">现实世界的苦难，也许远超人们的想象。</h2>
-        </header>
-        <div class="about-grid reveal">
-          <p>预印本：<a class="preprint-link" href="https://osf.io/preprints/socarxiv/xhky9_v1" target="_blank" rel="noreferrer">《我是21世纪的精神病人》 ↗</a></p>
-          <dl>
-            <div><dt>Name</dt><dd>Xu Jianzhou / 东云</dd></div>
-            <div><dt>Research</dt><dd>Mathematical NLP · Small models · Structured evaluation</dd></div>
-            <div><dt>Engineering</dt><dd>Agent Harness · FastAPI · React · Docker</dd></div>
-            <div><dt>Open identity</dt><dd><a href="https://orcid.org/0009-0008-6625-0148" target="_blank" rel="noreferrer">ORCID 0009-0008-6625-0148 ↗</a></dd></div>
-          </dl>
-        </div>
-      </section>
-
-      <section class="closing">
-        <p>Build small. Test the boundary. Ship the real thing.</p>
-        <a href="mailto:jzhou2409324124@gmail.com">jzhou2409324124@gmail.com ↗</a>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>© 2026 东云 / Shinonome</span>
-      <a href="https://shinonome.xyz/">返回个人首页 ↑</a>
-    </footer>
+      <footer class="archive-footer">
+        <strong>SHINONOME NETWORK</strong>
+        <span>Last modified: 2026/08/10 ・ Best viewed at 1024×768</span>
+        <nav aria-label="Footer links">
+          <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">GitHub</a> |
+          <a href="https://orcid.org/0009-0008-6625-0148" target="_blank" rel="noreferrer">ORCID</a> |
+          <a href="mailto:jzhou2409324124@gmail.com">Email</a>
+        </nav>
+        <small>© 2026 Shinonome</small>
+      </footer>
+    </div>
   </body>
 </html>
