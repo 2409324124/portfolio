@@ -45,7 +45,7 @@ test("live systems lead with CAT-Psych and expose only usable public destination
   assert.match(html, /href="https:\/\/shinonome\.xyz\/cat-psych"/);
   assert.match(html, /href="https:\/\/2409324124\.github\.io\/programming-visualization\/examples\/"/);
   assert.match(html, /href="https:\/\/preploop\.shinonome\.xyz"/);
-  assert.match(html, /href="https:\/\/2409324124\.github\.io\/xeon-max-9470c-benchmarks\/"/);
+  assert.match(html, /href="https:\/\/2409324124\.github\.io\/xeon-max-9470c-benchmarks\/report\/"/);
   assert.doesNotMatch(html, /href="https:\/\/github\.com\/2409324124\/preploop"/);
 });
 
@@ -89,7 +89,7 @@ test("project index is the only complete directory and orders usable systems fir
   }
   assert.equal((html.match(/<h2 class="panel-title">PROJECT INDEX<\/h2>/g) ?? []).length, 1);
   assert.doesNotMatch(html, /class="[^"]*research-panel/);
-  assert.match(html, /href="https:\/\/2409324124\.github\.io\/xeon-max-9470c-benchmarks\/"/);
+  assert.match(html, /href="https:\/\/2409324124\.github\.io\/xeon-max-9470c-benchmarks\/report\/"/);
   assert.match(html, /href="https:\/\/shinonome\.xyz\/cat-psych"/);
   assert.match(html, /href="https:\/\/osf\.io\/preprints\/socarxiv\/xhky9_v1"/);
   assert.match(html, /href="https:\/\/orcid\.org\/0009-0008-6625-0148"/);

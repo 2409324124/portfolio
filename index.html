@@ -4,12 +4,97 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#d4d4d4" />
-    <meta name="description" content="Shinonome Network：东云的个人研究、工程项目与 Benchmark 档案。" />
-    <meta property="og:title" content="SHINONOME NETWORK" />
-    <meta property="og:description" content="Personal Research &amp; Engineering Archive" />
+    <meta name="description" content="Projects by Xu Jianzhou (东云 / Shinonome): live AI systems, machine learning experiments, runtime tools, source code, and hardware benchmarks." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://portfolio.shinonome.xyz/" />
+    <meta property="og:title" content="Projects — Shinonome Network" />
+    <meta property="og:description" content="Live AI systems, machine learning experiments, runtime tools, source code, and hardware benchmarks by Xu Jianzhou." />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shinonome Network" />
+    <meta property="og:image" content="https://portfolio.shinonome.xyz/assets/shinonome-network-og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://portfolio.shinonome.xyz/" />
-    <title>SHINONOME NETWORK — Personal Research &amp; Engineering Archive</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projects — Shinonome Network" />
+    <meta name="twitter:description" content="Live systems, source code, research, and hardware benchmarks by Xu Jianzhou / 东云." />
+    <meta name="twitter:image" content="https://portfolio.shinonome.xyz/assets/shinonome-network-og.png" />
+    <title>Projects — Shinonome Network</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://portfolio.shinonome.xyz/#collection",
+            "url": "https://portfolio.shinonome.xyz/",
+            "name": "Projects — Shinonome Network",
+            "description": "Live systems, source code, research, and hardware benchmarks by Xu Jianzhou.",
+            "about": { "@id": "https://shinonome.xyz/#person" },
+            "mainEntity": { "@id": "https://portfolio.shinonome.xyz/#projects" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://shinonome.xyz/#person",
+            "name": "Xu Jianzhou",
+            "alternateName": ["东云", "Shinonome"],
+            "url": "https://shinonome.xyz/",
+            "sameAs": [
+              "https://github.com/2409324124",
+              "https://orcid.org/0009-0008-6625-0148"
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://portfolio.shinonome.xyz/#projects",
+            "name": "Shinonome Project Index",
+            "numberOfItems": 8,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": { "@type": "SoftwareApplication", "name": "CAT-Psych", "url": "https://shinonome.xyz/cat-psych", "applicationCategory": "HealthApplication" }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": { "@type": "SoftwareApplication", "name": "Programming Visualization", "url": "https://2409324124.github.io/programming-visualization/examples/", "applicationCategory": "EducationalApplication" }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": { "@type": "SoftwareApplication", "name": "PrepLoop", "url": "https://preploop.shinonome.xyz/", "applicationCategory": "EducationalApplication" }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": { "@type": "TechArticle", "name": "Xeon Max 9470C Benchmarks", "url": "https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": { "@type": "SoftwareSourceCode", "name": "DeepSeek Codex Adapter", "url": "https://github.com/2409324124/deepseek-codex-adapter", "codeRepository": "https://github.com/2409324124/deepseek-codex-adapter" }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": { "@type": "SoftwareSourceCode", "name": "Qwen3 LaTeX Correction", "url": "https://github.com/2409324124/Qwen-Desktop-Assistant-Classic", "codeRepository": "https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" }
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "item": { "@type": "SoftwareSourceCode", "name": "JobHunter Agent Harness", "url": "https://github.com/2409324124/jobhunter-agent-harness", "codeRepository": "https://github.com/2409324124/jobhunter-agent-harness" }
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
+                "item": { "@type": "SoftwareSourceCode", "name": "Claude Multi-Provider Router", "url": "https://github.com/2409324124/claude-code-multi-provider-skill", "codeRepository": "https://github.com/2409324124/claude-code-multi-provider-skill" }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
   </head>
@@ -87,7 +172,7 @@
               <a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">Start CAT-Psych</a>
               <a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Programming Demo</a>
               <a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">Open PrepLoop</a>
-              <a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/" target="_blank" rel="noreferrer">Xeon Report</a>
+              <a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noreferrer">Xeon Report</a>
               <a href="#project-index">Project Index</a>
               <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">Source Code (GitHub)</a>
               <a href="mailto:jzhou2409324124@gmail.com">Email Webmaster</a>
@@ -135,7 +220,10 @@
                     <p class="entry-links"><a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">[START TEST]</a> <a href="https://github.com/2409324124/adaptive_psych_system/blob/main/README.md" target="_blank" rel="noreferrer">[ABOUT]</a> <a href="https://github.com/2409324124/adaptive_psych_system" target="_blank" rel="noreferrer">[SOURCE]</a></p>
                   </div>
                   <figure class="live-preview live-preview-large">
-                    <img src="./assets/cat-psych-live.png" alt="CAT-Psych 自适应心理测评公开界面" />
+                    <picture>
+                      <source srcset="./assets/cat-psych-live-720.webp" type="image/webp" />
+                      <img src="./assets/cat-psych-live.png" alt="CAT-Psych 自适应心理测评公开界面" width="720" height="450" fetchpriority="high" />
+                    </picture>
                     <figcaption>Public assessment interface</figcaption>
                   </figure>
                 </div>
@@ -148,7 +236,10 @@
                     <em class="project-status demo">[DEMO]</em>
                   </header>
                   <figure class="live-preview">
-                    <img src="./assets/programming-runtime.png" alt="Programming Visualization Runtime Execution Viewer，显示调用栈、变量和执行步骤" />
+                    <picture>
+                      <source srcset="./assets/programming-runtime-720.webp" type="image/webp" />
+                      <img src="./assets/programming-runtime.png" alt="Programming Visualization Runtime Execution Viewer，显示调用栈、变量和执行步骤" width="720" height="452" loading="lazy" decoding="async" />
+                    </picture>
                   </figure>
                   <p class="live-subtitle"><b>LeetCode-style Programming Visualization</b></p>
                   <ul>
@@ -166,7 +257,10 @@
                     <em class="project-status active">[ONLINE]</em>
                   </header>
                   <figure class="live-preview">
-                    <img src="./assets/preploop-live.png" alt="PrepLoop 每日复习队列界面" />
+                    <picture>
+                      <source srcset="./assets/preploop-live-720.webp" type="image/webp" />
+                      <img src="./assets/preploop-live.png" alt="PrepLoop 每日复习队列界面" width="720" height="450" loading="lazy" decoding="async" />
+                    </picture>
                   </figure>
                   <p class="live-subtitle"><b>Daily Spaced Review</b></p>
                   <ul>
@@ -182,13 +276,13 @@
               <article class="live-entry live-report" id="hardware">
                 <div>
                   <header class="live-entry-header">
-                    <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/" target="_blank" rel="noreferrer">Xeon Max 9470C Benchmarks</a></h3>
+                    <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noreferrer">Xeon Max 9470C Benchmarks</a></h3>
                     <em class="project-status report">[REPORT]</em>
                   </header>
                   <p><b>52C / 104T · 64 GB HBM2e</b></p>
                   <p>STREAM · oneDNN · OpenVINO · LLM inference · PyTorch · TensorFlow · HPC</p>
                 </div>
-                <p class="entry-links"><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/" target="_blank" rel="noreferrer">[OPEN REPORT]</a></p>
+                <p class="entry-links"><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noreferrer">[OPEN REPORT]</a></p>
               </article>
             </div>
           </section>
@@ -249,7 +343,7 @@
                 <tr><td>01</td><td><a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">CAT-Psych</a></td><td>Application</td><td class="table-active">Online</td></tr>
                 <tr><td>02</td><td><a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Programming Visualization</a></td><td>Application</td><td class="table-active">Demo</td></tr>
                 <tr><td>03</td><td><a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">PrepLoop</a></td><td>Application</td><td class="table-active">Online</td></tr>
-                <tr><td>04</td><td><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/" target="_blank" rel="noreferrer">Xeon Max 9470C Benchmarks</a></td><td>Benchmark</td><td>Published</td></tr>
+                <tr><td>04</td><td><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noreferrer">Xeon Max 9470C Benchmarks</a></td><td>Benchmark</td><td>Published</td></tr>
                 <tr><td>05</td><td><a href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">DeepSeek Codex Adapter</a></td><td>Agent</td><td>Source</td></tr>
                 <tr><td>06</td><td><a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">Qwen3 LaTeX Correction</a></td><td>ML</td><td>Report</td></tr>
                 <tr><td>07</td><td><a href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">JobHunter Agent Harness</a></td><td>Agent</td><td>Source</td></tr>
