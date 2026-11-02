@@ -7,7 +7,7 @@ const copy = html.replace(/<script\b[\s\S]*?<\/script>/g, " ").replace(/<[^>]+>/
 
 test("portfolio orders current engineering evidence and removes obsolete projects", () => {
   let cursor = -1;
-  for (const id of ["open-source", "benchmarks", "ai-video", "blender-workflow", "model-lab", "games"]) {
+  for (const id of ["ai-video", "open-source", "benchmarks", "blender-workflow", "model-lab", "games"]) {
     const position = html.indexOf('id="' + id + '"');
     assert.ok(position > cursor, id + " should follow the previous section");
     cursor = position;
@@ -16,6 +16,17 @@ test("portfolio orders current engineering evidence and removes obsolete project
   assert.doesNotMatch(html, /Programming Visualization|programming-visualization|PrepLoop|preploop|JobHunter|jobhunter|Claude Multi-Provider Router|claude-code-multi-provider|DeepSeek Codex Adapter|deepseek-codex-adapter|98\.97/i);
   for (const metric of ["33/56", "48/56", "56.5%", "66.0%"]) assert.ok(copy.includes(metric), metric);
   assert.doesNotMatch(html, /href="[^"]*github\.com\/2409324124\/blender-ai-video/);
+});
+
+test("AI Video Harness leads navigation, section numbering and structured projects", () => {
+  const directory = html.match(/<div class="panel-body directory-tree">([\s\S]*?)<\/div>/)[1];
+  assert.equal(directory.match(/href="(#[^"]+)"/)[1], '#ai-video');
+  const nav = html.match(/<nav class="archive-nav"[^>]*>([\s\S]*?)<\/nav>/)[1];
+  assert.equal(nav.match(/href="(#[^"]+)"/)[1], '#ai-video');
+  const sections = [...html.matchAll(/<section\b[^>]*id="([^"]+)"[^>]*><h2 class="panel-title">(\d{2}) \/ /g)];
+  assert.deepEqual(sections.map(m => [m[1], m[2]]), [['ai-video','01'], ['open-source','02'], ['benchmarks','03'], ['blender-workflow','04'], ['model-lab','05'], ['games','06']]);
+  const graph = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+  assert.equal(graph.find(item => item['@type'] === 'ItemList').itemListElement[0].item.name, 'AI Video Harness');
 });
 
 test("writing and legacy destinations remain without legacy project cards", () => {
