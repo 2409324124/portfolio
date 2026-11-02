@@ -1,428 +1,306 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#d4d4d4" />
-    <meta name="description" content="Projects by Xu Jianzhou (东云 / Shinonome): live AI systems, machine learning experiments, runtime tools, source code, and hardware benchmarks." />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
-    <link rel="canonical" href="https://portfolio.shinonome.xyz/" />
-    <meta property="og:title" content="Projects — Shinonome Network" />
-    <meta property="og:description" content="Live AI systems, machine learning experiments, runtime tools, source code, and hardware benchmarks by Xu Jianzhou." />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Shinonome Network" />
-    <meta property="og:image" content="https://portfolio.shinonome.xyz/assets/shinonome-network-og.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://portfolio.shinonome.xyz/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Projects — Shinonome Network" />
-    <meta name="twitter:description" content="Live systems, source code, research, and hardware benchmarks by Xu Jianzhou / 东云." />
-    <meta name="twitter:image" content="https://portfolio.shinonome.xyz/assets/shinonome-network-og.png" />
-    <title>Projects — Shinonome Network</title>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "CollectionPage",
-            "@id": "https://portfolio.shinonome.xyz/#collection",
-            "url": "https://portfolio.shinonome.xyz/",
-            "name": "Projects — Shinonome Network",
-            "description": "Live systems, source code, research, and hardware benchmarks by Xu Jianzhou.",
-            "about": { "@id": "https://shinonome.xyz/#person" },
-            "mainEntity": { "@id": "https://portfolio.shinonome.xyz/#projects" }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://shinonome.xyz/#person",
-            "name": "Xu Jianzhou",
-            "alternateName": ["东云", "Shinonome"],
-            "url": "https://shinonome.xyz/",
-            "sameAs": [
-              "https://github.com/2409324124",
-              "https://orcid.org/0009-0008-6625-0148"
-            ]
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://portfolio.shinonome.xyz/#projects",
-            "name": "Shinonome Project Index",
-            "numberOfItems": 9,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": { "@type": "SoftwareApplication", "name": "CAT-Psych", "url": "https://shinonome.xyz/cat-psych", "applicationCategory": "HealthApplication" }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": { "@type": "SoftwareApplication", "name": "Programming Visualization", "url": "https://2409324124.github.io/programming-visualization/examples/", "applicationCategory": "EducationalApplication" }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": { "@type": "SoftwareApplication", "name": "PrepLoop", "url": "https://preploop.shinonome.xyz/", "applicationCategory": "EducationalApplication" }
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "item": { "@type": "SoftwareApplication", "name": "TU-22M", "url": "https://shinonome.xyz/tu22/", "applicationCategory": "GameApplication" }
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "item": { "@type": "TechArticle", "name": "Xeon Max 9470C Benchmarks", "url": "https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" }
-              },
-              {
-                "@type": "ListItem",
-                "position": 6,
-                "item": { "@type": "SoftwareSourceCode", "name": "DeepSeek Codex Adapter", "url": "https://github.com/2409324124/deepseek-codex-adapter", "codeRepository": "https://github.com/2409324124/deepseek-codex-adapter" }
-              },
-              {
-                "@type": "ListItem",
-                "position": 7,
-                "item": { "@type": "SoftwareSourceCode", "name": "Qwen3 LaTeX Correction", "url": "https://github.com/2409324124/Qwen-Desktop-Assistant-Classic", "codeRepository": "https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" }
-              },
-              {
-                "@type": "ListItem",
-                "position": 8,
-                "item": { "@type": "SoftwareSourceCode", "name": "JobHunter Agent Harness", "url": "https://github.com/2409324124/jobhunter-agent-harness", "codeRepository": "https://github.com/2409324124/jobhunter-agent-harness" }
-              },
-              {
-                "@type": "ListItem",
-                "position": 9,
-                "item": { "@type": "SoftwareSourceCode", "name": "Claude Multi-Provider Router", "url": "https://github.com/2409324124/claude-code-multi-provider-skill", "codeRepository": "https://github.com/2409324124/claude-code-multi-provider-skill" }
-              }
-            ]
-          }
-        ]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#062d58" />
+<meta name="description" content="东云 / Shinonome 的 Agent Engineering 与 Evaluation 作品集：终端 Coding Agent 与执行记录工具的开源贡献、Windows 与 Bash 评测、AI 视频和 Blender 建模工作流、公式专项微调及 Harness 驱动的游戏开发。" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<link rel="canonical" href="https://portfolio.shinonome.xyz/" />
+<meta property="og:title" content="东云作品集｜Agent Engineering &amp; Evaluation" />
+<meta property="og:description" content="我的 Coding Agent 开源贡献、执行评测、AI 视频与程序化建模实践，附实现、评测结果和可观看产物。" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="东云 / Shinonome" />
+<meta property="og:image" content="https://portfolio.shinonome.xyz/assets/tu22-blender-poster.webp" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="720" />
+<meta property="og:image:alt" content="TU22 Blender 场景渲染" />
+<meta property="og:url" content="https://portfolio.shinonome.xyz/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="东云作品集｜Agent Engineering &amp; Evaluation" />
+<meta name="twitter:description" content="开源贡献、执行评测、AI 视频与程序化场景建模。" />
+<meta name="twitter:image" content="https://portfolio.shinonome.xyz/assets/tu22-blender-poster.webp" />
+<title>东云作品集｜Agent Engineering &amp; Evaluation</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://portfolio.shinonome.xyz/#collection",
+      "url": "https://portfolio.shinonome.xyz/",
+      "name": "东云作品集｜Agent Engineering & Evaluation",
+      "about": {
+        "@id": "https://shinonome.xyz/#person"
+      },
+      "mainEntity": {
+        "@id": "https://portfolio.shinonome.xyz/#projects"
       }
-    </script>
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js" defer></script>
-  </head>
-  <body id="top">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
-    <div class="archive-shell">
-      <header class="archive-header">
-        <div class="masthead">
-          <h1>SHINONOME NETWORK</h1>
-          <strong class="online-indicator">[ONLINE]</strong>
-        </div>
-        <p class="archive-subtitle"><b>東雲</b> Personal Research &amp; Engineering Archive</p>
-        <nav class="archive-nav" aria-label="Primary navigation">
-          <a href="#top">Home</a><span aria-hidden="true">|</span>
-          <a href="#projects">Live Systems</a><span aria-hidden="true">|</span>
-          <a href="#source-research">Source &amp; Research</a><span aria-hidden="true">|</span>
-          <a href="#project-index">Project Index</a><span aria-hidden="true">|</span>
-          <a href="#about">About</a><span aria-hidden="true">|</span>
-          <a href="#links">Links</a>
-        </nav>
-      </header>
-
-      <div class="portal-grid">
-        <aside class="sidebar" aria-label="Site information">
-          <section class="portal-panel directory-panel">
-            <h2 class="panel-title">SITE DIRECTORY</h2>
-            <div class="panel-body directory-tree">
-              <details open>
-                <summary><span class="pixel-icon folder-icon" aria-hidden="true"></span>Live Systems</summary>
-                <a href="#cat-psych"><span class="pixel-icon folder-icon" aria-hidden="true"></span>CAT-Psych</a>
-                <a href="#interactive"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Programming</a>
-                <a href="#prep-loop"><span class="pixel-icon folder-icon" aria-hidden="true"></span>PrepLoop</a>
-                <a href="#hardware"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Xeon Report</a>
-              </details>
-              <details open>
-                <summary><span class="pixel-icon folder-icon" aria-hidden="true"></span>Source &amp; Research</summary>
-                <a href="#agent-systems"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Agent Systems</a>
-                <a href="#machine-learning"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Model Evaluation</a>
-                <a href="#jobhunter"><span class="pixel-icon folder-icon" aria-hidden="true"></span>JobHunter</a>
-                <a href="#claude-router"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Provider Router</a>
-              </details>
-              <a href="#project-index"><span class="pixel-icon folder-icon" aria-hidden="true"></span>Project Index</a>
-              <a href="#about"><span class="pixel-icon user-icon" aria-hidden="true"></span>About Me</a>
-              <a href="#links"><span class="pixel-icon network-icon" aria-hidden="true"></span>Links</a>
-            </div>
-          </section>
-
-          <section class="portal-panel status-panel">
-            <h2 class="panel-title panel-title-teal">SITE STATUS</h2>
-            <div class="panel-body compact-list">
-              <p><span class="pixel-icon calendar-icon" aria-hidden="true"></span>Last updated: <time datetime="2026-08-10">2026/08/10</time></p>
-              <p><span class="pixel-icon computer-icon" aria-hidden="true"></span>Best viewed at 1024 × 768</p>
-              <p><span class="status-lamp" aria-hidden="true"></span>Status: <strong class="status-online">ONLINE</strong></p>
-              <p>Hosted by GitHub Pages</p>
-            </div>
-          </section>
-
-          <section class="portal-panel system-panel">
-            <h2 class="panel-title panel-title-teal">SYSTEM INFO</h2>
-            <div class="panel-body system-info">
-              <span class="pixel-computer" aria-hidden="true"></span>
-              <dl>
-                <div><dt>Archive:</dt><dd>SHINONOME-1</dd></div>
-                <div><dt>Platform:</dt><dd>Static HTML</dd></div>
-                <div><dt>Mode:</dt><dd>No framework</dd></div>
-                <div><dt>Time:</dt><dd id="local-time">--:--</dd></div>
-              </dl>
-            </div>
-          </section>
-
-          <section class="portal-panel" id="links">
-            <h2 class="panel-title panel-title-teal">QUICK LINKS</h2>
-            <div class="panel-body quick-links">
-              <a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">Start CAT-Psych</a>
-              <a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Programming Demo</a>
-              <a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">Open PrepLoop</a>
-              <a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noreferrer">Xeon Report</a>
-              <a href="#project-index">Project Index</a>
-              <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">Source Code (GitHub)</a>
-              <a href="mailto:jzhou2409324124@gmail.com">Email Webmaster</a>
-            </div>
-          </section>
-
-          <section class="portal-panel supported-panel">
-            <h2 class="panel-title">SUPPORTED BY</h2>
-            <div class="panel-body support-badges">
-              <span class="support-badge"><b>HTML</b><small>4.01</small></span>
-              <span class="support-badge"><b>CSS</b><small>STYLES</small></span>
-              <span class="support-badge"><b>LINUX</b><small>POWERED</small></span>
-              <span class="support-badge"><b>GITHUB</b><small>PAGES</small></span>
-            </div>
-          </section>
-        </aside>
-
-        <main id="main-content" class="main-column">
-          <section class="portal-panel welcome-panel">
-            <h2 class="panel-title">WELCOME TO SHINONOME NETWORK</h2>
-            <div class="panel-body">
-              <p class="welcome-index"><b>Agent systems · Machine learning · Runtime · Hardware experiments</b></p>
-              <p>这里是东云的软件、实验、研究笔记、Benchmark 与技术写作档案。</p>
-            </div>
-          </section>
-
-          <section class="portal-panel featured-panel" id="projects">
-            <h2 class="panel-title">LIVE SYSTEMS / TRY IT</h2>
-            <div class="live-systems">
-              <article class="live-entry live-cat" id="cat-psych">
-                <header class="live-entry-header">
-                  <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">CAT-Psych</a></h3>
-                  <em class="project-status active">[ONLINE]</em>
-                </header>
-                <div class="live-cat-grid">
-                  <div class="live-copy">
-                    <p class="live-subtitle"><b>Adaptive Big Five Personality Assessment</b></p>
-                    <ul>
-                      <li>MIRT / CAT adaptive item selection</li>
-                      <li>50-item Big Five starter bank</li>
-                      <li>Early stop and stability checks</li>
-                      <li>Result report and shareable result page</li>
-                      <li>Chinese-first questionnaire</li>
-                    </ul>
-                    <p class="entry-links"><a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">[START TEST]</a> <a href="https://github.com/2409324124/adaptive_psych_system/blob/main/README.md" target="_blank" rel="noreferrer">[ABOUT]</a> <a href="https://github.com/2409324124/adaptive_psych_system" target="_blank" rel="noreferrer">[SOURCE]</a></p>
-                  </div>
-                  <figure class="live-preview live-preview-large">
-                    <picture>
-                      <source srcset="./assets/cat-psych-live-720.webp" type="image/webp" />
-                      <img src="./assets/cat-psych-live.png" alt="CAT-Psych 自适应心理测评公开界面" width="720" height="450" fetchpriority="high" />
-                    </picture>
-                    <figcaption>Public assessment interface</figcaption>
-                  </figure>
-                </div>
-              </article>
-
-              <div class="live-secondary-grid">
-                <article class="live-entry" id="interactive">
-                  <header class="live-entry-header">
-                    <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Programming Visualization</a></h3>
-                    <em class="project-status demo">[DEMO]</em>
-                  </header>
-                  <figure class="live-preview">
-                    <picture>
-                      <source srcset="./assets/programming-runtime-720.webp" type="image/webp" />
-                      <img src="./assets/programming-runtime.png" alt="Programming Visualization Runtime Execution Viewer，显示调用栈、变量和执行步骤" width="720" height="452" loading="lazy" decoding="async" />
-                    </picture>
-                  </figure>
-                  <p class="live-subtitle"><b>LeetCode-style Programming Visualization</b></p>
-                  <ul>
-                    <li>Step through algorithm execution</li>
-                    <li>Arrays / Hash Maps / Linked Lists / DP</li>
-                    <li>Variable and call-stack state</li>
-                    <li>Interactive demo gallery</li>
-                  </ul>
-                  <p class="entry-links"><a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">[OPEN DEMO]</a> <a href="https://github.com/2409324124/programming-visualization" target="_blank" rel="noreferrer">[SOURCE]</a></p>
-                </article>
-
-                <article class="live-entry" id="prep-loop">
-                  <header class="live-entry-header">
-                    <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">PrepLoop</a></h3>
-                    <em class="project-status active">[ONLINE]</em>
-                  </header>
-                  <figure class="live-preview">
-                    <picture>
-                      <source srcset="./assets/preploop-live-720.webp" type="image/webp" />
-                      <img src="./assets/preploop-live.png" alt="PrepLoop 每日复习队列界面" width="720" height="450" loading="lazy" decoding="async" />
-                    </picture>
-                  </figure>
-                  <p class="live-subtitle"><b>Daily Spaced Review</b></p>
-                  <ul>
-                    <li>Algorithms / Agent Harness / System Design</li>
-                    <li>Again / Hard / Good / Easy</li>
-                    <li>Daily review queue</li>
-                    <li>History and weak-topic review</li>
-                  </ul>
-                  <p class="entry-links"><a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">[OPEN]</a></p>
-                </article>
-              </div>
-
-              <article class="live-entry live-cat" id="tu22">
-                <header class="live-entry-header">
-                  <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://shinonome.xyz/tu22/" target="_blank" rel="noreferrer">TU-22M</a></h3>
-                  <em class="project-status active">[PLAYABLE]</em>
-                </header>
-                <div class="live-cat-grid">
-                  <div class="live-copy">
-                    <p class="live-subtitle"><b>Variable-Sweep Flight Game</b></p>
-                    <ul>
-                      <li>Pixel TUI · Side-view flight</li>
-                      <li>Variable-sweep wings and flight dynamics</li>
-                      <li>Sonic transition · Missile release · Fleet defence</li>
-                      <li>Three complete missions · Original game audio</li>
-                      <li>TypeScript · Phaser · WebGL / Canvas</li>
-                    </ul>
-                    <p class="entry-links"><a href="https://shinonome.xyz/tu22/" target="_blank" rel="noreferrer">[SCREENSHOTS &amp; VIDEO]</a> <a href="https://shinonome.xyz/tu22/play/" target="_blank" rel="noreferrer">[PLAY]</a></p>
-                    <p>Desktop keyboard required to play.</p>
-                  </div>
-                  <figure class="live-preview live-preview-large">
-                    <a href="https://shinonome.xyz/tu22/" target="_blank" rel="noreferrer"><img src="./assets/tu22-sonic.png" alt="TU-22M 实际游戏画面：红星垂尾与突破音速时的像素凝结云" width="960" height="540" loading="lazy" decoding="async" /></a>
-                    <figcaption>Actual gameplay · Mach 1 breakthrough</figcaption>
-                  </figure>
-                </div>
-              </article>
-
-              <article class="live-entry live-report" id="hardware">
-                <div>
-                  <header class="live-entry-header">
-                    <h3><span class="pixel-icon document-icon" aria-hidden="true"></span><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noreferrer">Xeon Max 9470C Benchmarks</a></h3>
-                    <em class="project-status report">[REPORT]</em>
-                  </header>
-                  <p><b>52C / 104T · 64 GB HBM2e</b></p>
-                  <p>STREAM · oneDNN · OpenVINO · LLM inference · PyTorch · TensorFlow · HPC</p>
-                </div>
-                <p class="entry-links"><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noreferrer">[OPEN REPORT]</a></p>
-              </article>
-            </div>
-          </section>
-
-          <section class="portal-panel source-panel" id="source-research">
-            <h2 class="panel-title">SOURCE &amp; RESEARCH</h2>
-            <div class="source-directory">
-              <article class="source-entry" id="agent-systems">
-                <span class="pixel-icon document-icon" aria-hidden="true"></span>
-                <div>
-                  <h3><a href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">DeepSeek Codex Adapter</a></h3>
-                  <p>Codex Responses ↔ DeepSeek compatibility layer</p>
-                  <p class="source-meta">SSE · Parallel Tool Calls · MCP edit workflow</p>
-                </div>
-                <p class="entry-links"><a href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">[SOURCE]</a> <a href="https://github.com/2409324124/deepseek-codex-adapter#readme" target="_blank" rel="noreferrer">[README]</a></p>
-              </article>
-
-              <article class="source-entry" id="machine-learning">
-                <span class="pixel-icon document-icon" aria-hidden="true"></span>
-                <div>
-                  <h3><a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">Qwen3 LaTeX Correction</a></h3>
-                  <p>Natural-language math → canonical LaTeX</p>
-                  <p class="source-meta">Qwen3-4B · LoRA SFT · 292 eval · 98.97% math · 83.22% exact</p>
-                </div>
-                <p class="entry-links"><a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic#readme" target="_blank" rel="noreferrer">[REPORT]</a> <a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">[SOURCE]</a></p>
-              </article>
-
-              <article class="source-entry" id="jobhunter">
-                <span class="pixel-icon document-icon" aria-hidden="true"></span>
-                <div>
-                  <h3><a href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">JobHunter Agent Harness</a></h3>
-                  <p>Job collection · ranking · candidate memory · human approval</p>
-                </div>
-                <p class="entry-links"><a href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">[SOURCE]</a></p>
-              </article>
-
-              <article class="source-entry" id="claude-router">
-                <span class="pixel-icon document-icon" aria-hidden="true"></span>
-                <div>
-                  <h3><a href="https://github.com/2409324124/claude-code-multi-provider-skill" target="_blank" rel="noreferrer">Claude Multi-Provider Router</a></h3>
-                  <p>Claude Code → GPT / DeepSeek / MiMo / Gemini</p>
-                  <p class="source-meta">Fallback · cooldown · diagnostics</p>
-                </div>
-                <p class="entry-links"><a href="https://github.com/2409324124/claude-code-multi-provider-skill" target="_blank" rel="noreferrer">[SOURCE]</a></p>
-              </article>
-            </div>
-          </section>
-        </main>
-      </div>
-
-      <div class="lower-grid">
-        <section class="portal-panel project-index-panel" id="project-index">
-          <h2 class="panel-title">PROJECT INDEX</h2>
-          <div class="table-scroll">
-            <table>
-              <thead><tr><th>No.</th><th>Project</th><th>Category</th><th>Status</th></tr></thead>
-              <tbody>
-                <tr><td>01</td><td><a href="https://shinonome.xyz/cat-psych" target="_blank" rel="noreferrer">CAT-Psych</a></td><td>Application</td><td class="table-active">Online</td></tr>
-                <tr><td>02</td><td><a href="https://2409324124.github.io/programming-visualization/examples/" target="_blank" rel="noreferrer">Programming Visualization</a></td><td>Application</td><td class="table-active">Demo</td></tr>
-                <tr><td>03</td><td><a href="https://preploop.shinonome.xyz" target="_blank" rel="noreferrer">PrepLoop</a></td><td>Application</td><td class="table-active">Online</td></tr>
-                <tr><td>04</td><td><a href="https://shinonome.xyz/tu22/" target="_blank" rel="noreferrer">TU-22M</a></td><td>Game</td><td class="table-active">Playable</td></tr>
-                <tr><td>05</td><td><a href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noreferrer">Xeon Max 9470C Benchmarks</a></td><td>Benchmark</td><td>Published</td></tr>
-                <tr><td>06</td><td><a href="https://github.com/2409324124/deepseek-codex-adapter" target="_blank" rel="noreferrer">DeepSeek Codex Adapter</a></td><td>Agent</td><td>Source</td></tr>
-                <tr><td>07</td><td><a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noreferrer">Qwen3 LaTeX Correction</a></td><td>ML</td><td>Report</td></tr>
-                <tr><td>08</td><td><a href="https://github.com/2409324124/jobhunter-agent-harness" target="_blank" rel="noreferrer">JobHunter Agent Harness</a></td><td>Agent</td><td>Source</td></tr>
-                <tr><td>09</td><td><a href="https://github.com/2409324124/claude-code-multi-provider-skill" target="_blank" rel="noreferrer">Claude Multi-Provider Router</a></td><td>Agent</td><td>Source</td></tr>
-
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-      </div>
-
-      <section class="portal-panel about-panel" id="about">
-        <h2 class="panel-title">ABOUT THE WEBMASTER</h2>
-        <div class="panel-body about-grid">
-          <div class="about-block identity-block">
-            <span class="pixel-computer large" aria-hidden="true"></span>
-            <div><p><b>Name:</b> Xu Jianzhou / 东云</p><p><b>Interests:</b><br />Agent systems · Machine learning · Computer hardware · Psychology</p></div>
-          </div>
-          <div class="about-block writing-block">
-            <span class="book-icon" aria-hidden="true">▥</span>
-            <div><p><b>Writing / Research:</b></p><p>《我是21世纪的精神病人》</p><p><a href="https://osf.io/preprints/socarxiv/xhky9_v1" target="_blank" rel="noreferrer">[READ PREPRINT]</a></p></div>
-          </div>
-          <div class="about-block workstation-block">
-            <span class="chip-icon" aria-hidden="true">▦</span>
-            <div><p><b>Current workstation:</b></p><p>Intel Xeon CPU Max 9470C<br />52C / 104T · 64 GB HBM2e</p><p><a href="#hardware">[SYSTEM INFO]</a></p></div>
-          </div>
-        </div>
-      </section>
-
-      <div class="web-buttons" aria-label="Site badges">
-        <a href="#top">SHINONOME<br /><b>NETWORK</b></a>
-        <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">OPEN<br /><b>SOURCE</b></a>
-        <a href="#hardware">X86 / HBM<br /><b>PERFORMANCE</b></a>
-        <a href="https://github.com/2409324124/portfolio" target="_blank" rel="noreferrer">&lt;/&gt;<br /><b>VIEW SOURCE</b></a>
-        <a href="#top">BEST VIEWED<br /><b>1024 × 768</b></a>
-      </div>
-
-      <footer class="archive-footer">
-        <strong>SHINONOME NETWORK</strong>
-        <span>Last modified: 2026/08/10 ・ Best viewed at 1024×768</span>
-        <nav aria-label="Footer links">
-          <a href="https://github.com/2409324124" target="_blank" rel="noreferrer">GitHub</a> |
-          <a href="https://orcid.org/0009-0008-6625-0148" target="_blank" rel="noreferrer">ORCID</a> |
-          <a href="mailto:jzhou2409324124@gmail.com">Email</a>
-        </nav>
-        <small>© 2026 Shinonome</small>
-      </footer>
-    </div>
-  </body>
+    },
+    {
+      "@type": "Person",
+      "@id": "https://shinonome.xyz/#person",
+      "name": "东云",
+      "alternateName": "Shinonome",
+      "url": "https://shinonome.xyz/",
+      "sameAs": [
+        "https://github.com/2409324124"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://portfolio.shinonome.xyz/#projects",
+      "name": "Agent Engineering & Evaluation",
+      "numberOfItems": 9,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "Backlot",
+            "description": "Agent 外部 API 仿真环境；我的贡献是 GitHub 与 Slack 接口行为的差异修复。",
+            "url": "https://github.com/brekkylab/backlot"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "Nanocoder",
+            "description": "开源、本地优先的终端 Coding Agent；我主导 Plan Mode 建设，并实现文件编辑后的自动 LSP 诊断。",
+            "url": "https://github.com/Nano-Collective/nanocoder"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "Tracekit",
+            "description": "Agent 执行记录与校验工具；我修复 Qwen Code 接入中的用户输入归因问题。",
+            "url": "https://github.com/Cygnux-Labs/Tracekit"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "Windows PowerShell Benchmark",
+            "description": "真实 Windows 环境下的 Coding Agent 评测；我搭建执行环境、设计五级任务并分离运行与判分。",
+            "url": "https://github.com/2409324124/windows-powershell-benchmark-poc"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "ShellSem-Bench",
+            "description": "Bash 任务评测；我设计隐藏场景并结合执行记录区分模型失败与 Harness 故障。",
+            "url": "https://github.com/2409324124/shellsem-bench"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "AI Video Harness",
+            "description": "以 TU22 为案例的 Blender 预演与视频生成实验，检查主体关系、动作时序与运镜要求的保留情况。",
+            "url": "https://portfolio.shinonome.xyz/#ai-video"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "Blender Asset Workflow",
+            "description": "面向建模 Agent 的分阶段工作流；我组织几何规划、独立视觉检查与导出验证。",
+            "url": "https://github.com/2409324124/blender-asset-workflow-skill"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "Qwen SFT Lab",
+            "description": "数学描述转规范 LaTeX 的专项微调；我完成数据隔离、LoRA SFT、能力诊断与本地工具交付。",
+            "url": "https://github.com/2409324124/Qwen-Desktop-Assistant-Classic"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "TU22 / YAK-144",
+            "description": "Harness 驱动的游戏开发：TU22 在 Phaser／Three.js 基础上实现自研引擎模块，以真实输入、只读状态探针和截图验证首关流程；另有 YAK-144 单关动作原型。",
+            "url": "https://shinonome.xyz/tu22/"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="./styles.css" />
+<script src="./app.js" defer></script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main-content">跳到作品内容</a>
+<div class="archive-shell">
+<header class="archive-header">
+<div class="masthead"><h1>东云 / Shinonome</h1><span class="masthead-mark" aria-hidden="true">[ WORK / INDEX ]</span></div>
+<p class="archive-subtitle">Agent Engineering <span aria-hidden="true">·</span> Evaluation</p>
+<nav class="archive-nav" aria-label="站点导航"><a href="https://shinonome.xyz/">返回桌面</a><a href="#open-source">开源贡献</a><a href="#benchmarks">Benchmark</a><a href="#ai-video">AI 视频</a><a href="#blender-workflow">场景建模</a><a href="https://bbs.shinonome.xyz/">东云通信局</a></nav>
+</header>
+<div class="portal-grid">
+<aside class="sidebar" aria-label="作品目录">
+<nav class="portal-panel directory-panel" aria-label="页内目录"><h2 class="panel-title">DIRECTORY / 目录</h2>
+<div class="panel-body directory-tree">
+<details open><summary>开源贡献</summary><a href="#backlot">Backlot</a><a href="#nanocoder">Nanocoder</a><a href="#tracekit">Tracekit</a></details>
+<details open><summary>Coding Benchmark</summary><a href="#powershell">PowerShell</a><a href="#shellsem">ShellSem-Bench</a></details>
+<details open><summary>多模态与场景</summary><a href="#ai-video">AI Video Harness</a><a href="#blender-workflow">Blender 工作流</a></details>
+<a href="#model-lab">Qwen SFT Lab</a><a href="#games">TU22 / YAK-144</a><a href="#about">关于 / 写作</a>
+</div></nav>
+<section class="portal-panel side-note"><h2 class="panel-title panel-title-teal">FIELD NOTES</h2><div class="panel-body"><p>任务怎么定义？<br />工具怎样执行？<br />结果如何验证？</p><p class="muted">从执行轨迹到实际画面，分开检查“运行完成”和“满足要求”。</p><a href="https://github.com/2409324124" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></section>
+<div class="sidebar-clock"><span aria-hidden="true">[ LOCAL TIME ]</span><time id="local-time">--:--</time></div>
+</aside>
+<main id="main-content" class="main-column">
+<section class="portal-panel welcome-panel" aria-labelledby="welcome-title"><h2 class="panel-title" id="welcome-title">WORK / 实验与实践</h2><div class="panel-body"><p class="intro">我参与 Coding Agent 开发，也为它设计评测。</p><p>从终端工具的计划执行与错误反馈，到 Windows／Bash 任务评测，再到建模、视频和游戏开发，下面是我做过的工作、遇到的问题和留下的产物。</p></div></section>
+<section class="portal-panel" id="open-source"><h2 class="panel-title">01 / 开源贡献</h2><div class="project-list"><article class="project-entry" id="backlot">
+<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/backlot-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Backlot</h3><span class="entry-kind">Agent 外部 API 仿真环境</span></div></div>
+<p>Backlot 为 Agent 提供外部 API 的仿真环境。如果认证、错误响应或限流行为与真实接口不同，同一任务在两边可能得到不同结果。</p>
+<p>我对照真实 GitHub REST API，修复 Basic 凭据识别、认证顺序、错误响应及限流行为，并修复 Slack 广播消息行为。</p><p class="evidence">PR #1038：371 个对照场景，修复 108 个原有差异；该组未发现新增回归。</p><p class="entry-links"><a href="https://github.com/brekkylab/backlot/pull/1038" target="_blank" rel="noopener noreferrer">GitHub API 修复 ↗</a>
+<a href="https://github.com/brekkylab/backlot/pull/1151" target="_blank" rel="noopener noreferrer">Slack 行为修复 ↗</a>
+<a href="https://github.com/brekkylab/backlot" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article>
+<article class="project-entry" id="nanocoder">
+<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/nanocoder-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Nanocoder</h3><span class="entry-kind">开源、本地优先的终端 Coding Agent</span></div></div>
+<p>Nanocoder 支持接入本地模型和多种模型服务，在终端中完成代码任务。我的贡献主要围绕长程任务的计划执行，以及修改代码后的错误反馈。</p>
+<p>为了让任务从计划、审批持续推进到执行和验收，我主导了完整 Plan Mode 建设，支持 CLI、Headless 和 VS Code 之间的任务延续与会话恢复。另外实现文件编辑后的自动 LSP 诊断，将错误、警告和位置反馈给下一轮推理，让 Agent 据此修复并复验。</p><p class="evidence">Plan Mode #826、LSP #620 已合入；截至 2026-11-01，累计 5 个上游 PR 获合并。</p><p class="entry-links"><a href="https://github.com/Nano-Collective/nanocoder/pull/826" target="_blank" rel="noopener noreferrer">Plan Mode #826 ↗</a>
+<a href="https://github.com/Nano-Collective/nanocoder/pull/620" target="_blank" rel="noopener noreferrer">LSP #620 ↗</a>
+<a href="https://github.com/Nano-Collective/nanocoder" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article>
+<article class="project-entry" id="tracekit">
+<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/tracekit-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Tracekit</h3><span class="entry-kind">Agent 执行记录与校验工具</span></div></div>
+<p>Tracekit 记录 Agent 的工具调用与策略判断，并提供可核验的执行记录。我参与的是 Qwen Code 接入中的用户输入归因修复。</p>
+<p>Qwen Code 的工具结果、Hook 续写和展开文件内容可能被误记为用户指令，影响后续对执行过程与用户约束的判断。我通过 <code>submitted_prompt</code> 区分真实提交，修复记录与约束提取的来源，并用自动化测试和真实 CLI／TUI 操作做前后对照验证。</p><p class="entry-links"><a href="https://github.com/Cygnux-Labs/Tracekit/pull/417" target="_blank" rel="noopener noreferrer">已合入 PR #417 ↗</a>
+<a href="https://github.com/Cygnux-Labs/Tracekit" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article></div></section>
+<section class="portal-panel" id="benchmarks"><h2 class="panel-title">02 / Coding Benchmark</h2><div class="project-list"><article class="project-entry" id="powershell">
+<div class="entry-heading"><h3>Windows PowerShell Benchmark</h3><span class="entry-kind">真实 Windows 环境下的 Coding Agent 评测</span></div>
+<p>这套评测检查 Agent 在真实 Windows 环境中能否完成 PowerShell 任务。编码、特殊路径和退出码等问题，需要通过实际执行和最终状态来判断。</p>
+<p>我用 KVM / QEMU 搭建 Windows Server 2025 环境，为 PowerShell 5.1 设计五级任务，进一步覆盖有界并发与事务部署；将 Runner、过程 Judge 和隐藏机器验证分开，留存执行轨迹与最终状态。</p><p class="evidence">5 模型 × 5 题，共 25 次有效运行；该矩阵基础设施失败为 0，不等于任务全部通过。</p><p class="entry-links"><a href="https://powershell.shinonome.xyz/" target="_blank" rel="noopener noreferrer">查看评测展示 ↗</a>
+<a href="https://github.com/2409324124/windows-powershell-benchmark-poc" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p></article>
+<article class="project-entry" id="shellsem">
+<div class="entry-heading"><h3>ShellSem-Bench</h3><span class="entry-kind">Bash 任务评测与 Harness 故障归因</span></div>
+<p>ShellSem-Bench 用 Bash 任务和隐藏场景检查模型提交。一次运行失败，既可能来自模型，也可能来自承载它的 Harness（运行与评测框架），需要分开归因。</p>
+<p>我设计任务与隐藏场景，在 Docker 中隔离生成和判分，分别记录生成异常与提交功能结果。后续两题裸模型 / Pi 深测对照中，我结合执行记录定位上下文压缩及僵尸进程耗尽 PID 的问题，修正配置与容器进程回收。</p><p class="evidence">五题、每题 6 个隐藏场景；两模型共 10 次初版 smoke 生成。后续两题深测与初版 smoke 的实验范围分别记录。</p><p class="entry-links"><a href="https://github.com/2409324124/shellsem-bench/blob/codex/smoke-v0.1.0/reports/model-comparison-summary-2026-09-14.md" target="_blank" rel="noopener noreferrer">对照报告 ↗</a>
+<a href="https://github.com/2409324124/shellsem-bench" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p></article></div></section>
+<section class="portal-panel media-section" id="ai-video"><h2 class="panel-title">03 / AI Video Harness</h2><div class="panel-body">
+<h3 class="section-heading">场景理解与运镜控制</h3>
+<p>这是以 TU22 为案例的 Blender 预演与 AI 视频生成实验。我想观察视频模型能否保留给定的主体关系、动作时序和运镜要求。</p>
+<p>我将场景、主体动作和镜头要求转成可执行的 Blender 预演，再接入视频生成模型，组织生成任务与重试、保存输入版本，并检查生成视频中的双机关系、导弹离架和镜头交接。</p>
+<div class="video-grid">
+<div class="video-example">
+<h4 id="render-label">Blender 场景与渲染<small>20s · 720p</small></h4>
+<video id="render-video" data-project-video controls playsinline preload="none" width="1280" height="720" poster="./assets/tu22-blender-poster.webp" aria-labelledby="render-label" aria-describedby="render-video-error"><source src="./assets/tu22-blender-latest.mp4" type="video/mp4" />浏览器无法播放此视频，请使用下方直接视频链接。</video>
+<p>从空间、主体动作到相机路径，显式构建可检查的三维场景。</p><p id="render-video-error" class="media-error" role="status" hidden>视频加载失败，请检查网络或打开下方视频链接重试。</p>
+<a href="./assets/tu22-blender-latest.mp4" target="_blank" rel="noopener noreferrer">打开视频 ↗</a></div>
+<div class="video-example">
+<h4 id="api-label">视频模型生成结果<small>10s · 720p</small></h4>
+<video id="api-video" data-project-video controls playsinline preload="none" width="1280" height="720" poster="./assets/tu22-api-poster.webp" aria-labelledby="api-label" aria-describedby="api-video-error"><source src="./assets/tu22-api-latest.mp4" type="video/mp4" />浏览器无法播放此视频，请使用下方直接视频链接。</video>
+<p>观察生成模型如何重现双机飞行、导弹离架与镜头运动。</p><p id="api-video-error" class="media-error" role="status" hidden>视频加载失败，请检查网络或打开下方视频链接重试。</p>
+<a href="./assets/tu22-api-latest.mp4" target="_blank" rel="noopener noreferrer">打开视频 ↗</a></div>
+</div>
+<p class="version-note">两侧展示各路线的最新产物，不是同版本输入输出的逐帧 A/B 对照。</p>
+<ol class="workflow-line" aria-label="Harness 工作流程"><li>输入版本核验</li><li>任务与重试管理</li><li>产物检查</li><li>独立视觉复核</li></ol>
+<dl class="observation-list"><div><dt>内容理解</dt><dd>双机关系、挂载及导弹离架是否保持。</dd></div><div><dt>运镜遵从</dt><dd>掠镜、跟随、主体交接与拉远是否符合意图。</dd></div><div><dt>时序一致性</dt><dd>运动中是否出现形变、漂移或动作断裂。</dd></div></dl>
+<details class="experiment-details"><summary>实验来源与检查方式</summary><div>
+<p>渲染侧为 2026-10-30 的 skin-v6 完整预览（20 秒、30fps）；API 侧为 2026-10-27 的 wan3.0-video 双镜头剪辑（10 秒、30fps）。API 飞行镜头使用经检查的 ComfyUI 深度控制小样作为参考，发射镜头使用已认可的 Blender v3 片段，并非左侧的新渲染版本。</p>
+<p>固定输入版本并记录哈希，保存任务、候选及帧映射；将文件解码、画面检查和用户验收分开。API 片是尚未加入后续蓝焰合成的剪辑，20 秒渲染仍为质感预览。本例展示工作流与观察方法，不给出未经验证的通用能力评分。</p>
+<p class="entry-links"><a href="./assets/tu22-api-reference-comparison.mp4" target="_blank" rel="noopener noreferrer">打开该轮参考与生成结果对照 ↗</a></p>
+<p class="media-credits">渲染片声音：unfa「<a href="https://freesound.org/people/unfa/sounds/168079/" target="_blank" rel="noopener noreferrer">Jet Flyby 1 ↗</a>」、Felix Blume「<a href="https://freesound.org/people/felix.blume/sounds/613855/" target="_blank" rel="noopener noreferrer">Rocket Launch Rumble ↗</a>」（CC0），以及 U.S. Navy / Tomas Valdes「<a href="https://www.dvidshub.net/video/943751/phalanx-close-weapon-system-live-fire" target="_blank" rel="noopener noreferrer">Phalanx Live Fire ↗</a>」（Public Domain）；其余为原创程序合成。The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.</p>
+</div></details>
+</div></section>
+<section class="portal-panel" id="blender-workflow"><h2 class="panel-title">04 / Blender Asset Workflow</h2><div class="panel-body">
+<h3 class="section-heading">场景建模与独立质量验证</h3>
+<p>Blender Asset Workflow 是面向建模 Agent 的开源工作流。复杂场景需要逐步检查几何与画面，局部修复也需要保护已经认可的部分。</p>
+<p>我把建模拆为 Geometry Planning、Blockout、白模预览和局部精修，明确各阶段输入、产物与验收条件；使用独立推理上下文检查实际画面，并通过有限轮次的修复与复验保护已认可的几何基线。</p>
+<div class="modeling-media" data-media-tabs>
+<div class="media-tablist" role="tablist" aria-label="建模工作流展示">
+<button type="button" id="process-tab" role="tab" aria-controls="process-panel" aria-selected="true" tabindex="0">构建过程</button>
+<button type="button" id="scenes-tab" role="tab" aria-controls="scenes-panel" aria-selected="false" tabindex="-1">场景成品</button>
+</div>
+<div id="process-panel" role="tabpanel" aria-labelledby="process-tab">
+<div class="video-example modeling-process">
+<h4 id="modeling-title">RIVET｜场景分阶段构建 <small>00:30 / Blender</small></h4>
+<video id="modeling-video" data-project-video width="1568" height="1080" controls playsinline preload="none" poster="./assets/rivet-modeling-poster.webp" aria-labelledby="modeling-title">
+<source src="./assets/rivet-modeling-process.mp4" type="video/mp4">
+你的浏览器不支持内嵌视频，请使用下方链接打开。
+</video>
+<p id="modeling-video-error" class="media-error" role="status" hidden></p>
+<p>从场地与主体结构，到车辆、道具和环境细节，逐阶段构建完整场景。</p>
+<a href="./assets/rivet-modeling-process.mp4" target="_blank" rel="noopener noreferrer">单独打开构建过程视频 ↗</a>
+</div>
+</div>
+<div id="scenes-panel" role="tabpanel" aria-labelledby="scenes-tab" hidden>
+<div class="scene-gallery" data-scene-gallery aria-label="场景建模图片展示">
+<figure data-gallery-slide><a href="./assets/scene-overview.webp" target="_blank" rel="noopener noreferrer" aria-label="查看 RIVET 场景大图（新标签页）"><img src="./assets/scene-overview.webp" alt="RIVET 维修店场景：青绿色皮卡、店面与围栏院子，用户选定的主展示图" width="1400" height="1100" loading="lazy" decoding="async" /></a><figcaption>RIVET / 场景主展示</figcaption></figure>
+<figure data-gallery-slide hidden><a href="./assets/scene-detail.webp" target="_blank" rel="noopener noreferrer" aria-label="查看 MORVI 白模大图（新标签页）"><img src="./assets/scene-detail.webp" alt="MORVI 咖啡馆白模：独立 frozen-v0.1 工作流测试产物" width="1200" height="900" loading="lazy" decoding="async" /></a><figcaption>MORVI / 独立 v0.1 测试</figcaption></figure>
+<figure data-gallery-slide hidden><a href="./assets/scene-structure.webp" target="_blank" rel="noopener noreferrer" aria-label="查看 NIGHT SHIFT 街景大图（新标签页）"><img src="./assets/scene-structure.webp" alt="NIGHT SHIFT 四店街景，工作流形成前的历史项目展示" width="1600" height="888" loading="lazy" decoding="async" /></a><figcaption>NIGHT SHIFT / 历史场景实践</figcaption></figure>
+<div class="gallery-toolbar"><span class="gallery-hint"><span class="hover-hint">悬停轮换 · </span>点图放大</span><div class="gallery-actions"><button type="button" data-gallery-prev aria-label="上一张场景图">←</button><span data-gallery-position aria-live="off">1 / 3</span><button type="button" data-gallery-next aria-label="下一张场景图">→</button><button type="button" data-gallery-toggle aria-pressed="false">暂停轮换</button></div></div>
+</div>
+</div>
+</div>
+<dl class="observation-list"><div><dt>分阶段构建</dt><dd>从空间布局、基础几何到细节，逐阶段检查与迭代。</dd></div><div><dt>独立 QA</dt><dd>独立推理上下文查看实际视觉产物；程序执行、几何数据和画面质量分别验证。</dd></div><div><dt>工具与回归</dt><dd>Blender CLI / Python API，BLEND 重开、GLB 导出重导入检查及 27 项本地回归测试。</dd></div></dl>
+<p class="entry-links"><a href="https://github.com/2409324124/blender-asset-workflow-skill" target="_blank" rel="noopener noreferrer">GitHub · 工作流源码 ↗</a></p>
+<details class="aircraft-details"><summary>飞机资产：轮廓与白模</summary><div class="aircraft-grid">
+<a href="./assets/f22-three-view.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/f22-three-view.webp" alt="F-22 已通过的轮廓三视图，展示俯视、侧视与正视结构" width="1600" height="1098" loading="lazy" decoding="async" /></a>
+<a href="./assets/aircraft-parade.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/aircraft-parade.webp" alt="六架飞机 Blender 白模的斜俯视合影" width="1600" height="1200" loading="lazy" decoding="async" /></a>
+</div></details>
+</div></section>
+<section class="portal-panel" id="model-lab"><h2 class="panel-title">05 / Qwen SFT Lab</h2><div class="panel-body">
+<h3 class="section-heading">公式专项微调与能力诊断</h3><p>Qwen SFT Lab 是将数学描述转为规范 LaTeX 的专项微调实验。针对模型容易生成错误公式的问题，我训练专项模型，并检查提升来自哪些任务、是否伴随其他能力变化。</p>
+<p>我建立结构签名、近亲分组与数据隔离流程，完成 Qwen3-4B LoRA SFT；随后做跨任务评测和长输出重复分析，交付 BF16 / GGUF、Ollama 本地推理与 npm 公式工具。</p>
+<figure class="formula-art" aria-labelledby="formula-caption">
+<div class="formula-art-body">
+<div class="formula-glyph" role="img" aria-label="算术平均值公式：x bar 等于从 i 等于 1 到 n 的 x i 之和除以 n。">
+<pre aria-hidden="true">            n
+          ▄▄▄▄▄▄▄
+           ▀█▄
+             █►  xᵢ
+           ▄█▀
+          ▀▀▀▀▀▀▀
+           i = 1
+ x̄  =  ─────────────────
+                n</pre>
+</div>
+<div class="formula-source"><span class="formula-label">[ LaTeX ]</span><code>\bar{x} = \frac{1}{n}<br>\sum_{i=1}^{n} x_i</code><span class="formula-label">QWEN3-4B / LoRA SFT</span></div>
+</div>
+<figcaption id="formula-caption">FORMULA / 从数学描述到规范 LaTeX</figcaption>
+</figure>
+<p class="evidence">同一 56 题开发集：33/56 → 48/56（58.93% → 85.71%）。MATH-500 固定 200 题、4K 输出预算：56.5% → 66.0%。</p>
+<p>后者包含格式与可验证性改善；结合跨任务表现和长输出重复分析，不将专项提升等同于全面推理提升。</p>
+<p class="entry-links"><a href="https://github.com/2409324124/Qwen-Desktop-Assistant-Classic" target="_blank" rel="noopener noreferrer">GitHub · 实验与报告 ↗</a>
+<a href="https://www.npmjs.com/package/qwen-latex-cli" target="_blank" rel="noopener noreferrer">npm 公式工具 ↗</a></p>
+</div></section>
+<section class="portal-panel" id="games"><h2 class="panel-title">06 / TU22 · YAK-144</h2><div class="panel-body">
+<h3 class="section-heading">Harness 驱动的游戏开发与自研引擎模块</h3>
+<p>TU22 是一款由 Harness 驱动开发的浏览器飞行游戏。飞行、镜头、渲染与任务逻辑彼此牵连，只检查代码无法判断它们在实际游玩中是否配合正常；Agent 需要能操作游戏、观察状态，再根据证据修复问题。</p>
+<p>我将玩法与交互要求转为开发规格，组织 Coding Agent 持续迭代。引擎侧以 TypeScript 实现自研的 ASCII 世界与字符渲染模块、相机投影和飞行模型，基于 Phaser／Three.js 完成游戏运行与底层三维绘制。</p>
+<p>验收侧，我搭建了从真实键鼠输入到只读状态探针、截图与运行报告的调试 CLI，让 Agent 能复现操作、定位失败，再修复并复验，不靠直接改写游戏状态跳过流程。</p>
+<a class="game-preview" href="https://shinonome.xyz/tu22/" target="_blank" rel="noopener noreferrer"><img src="./assets/tu22-sonic.png" alt="TU22 实际游戏画面，点击打开公开试玩" width="960" height="540" loading="lazy" decoding="async" /></a>
+<p>TU22 已交付三任务公开游戏，并实现首关真实输入 CLI、状态探针与截图验证；YAK-144 为含悬停、侧滚、射击、胜负与重试的单关原型。</p>
+<p class="entry-links"><a href="https://shinonome.xyz/tu22/" target="_blank" rel="noopener noreferrer">打开 TU22 试玩 ↗</a></p>
+</div></section>
+</main></div>
+<section class="portal-panel about-panel" id="about"><h2 class="panel-title panel-title-teal">ABOUT / 关于东云</h2><div class="panel-body about-grid"><div><p><b>东云 / Shinonome</b></p><p>研究兴趣：Coding Agent 评测、长程任务执行与验证、程序化 3D 与建模 Agent。</p><a href="https://github.com/2409324124" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div><p><b>写作 / 社会科学</b></p><p><a href="https://bbs.shinonome.xyz/">东云通信局</a></p><a href="https://osf.io/preprints/socarxiv/xhky9_v1" target="_blank" rel="noopener noreferrer">《我是21世纪的精神病人》 ↗</a></div></div></section>
+<footer class="archive-footer"><p class="early-projects">早期项目：<a id="cat-psych" href="https://shinonome.xyz/cat-psych" target="_blank" rel="noopener noreferrer">CAT-Psych</a><span aria-hidden="true"> / </span><a id="hardware" href="https://2409324124.github.io/xeon-max-9470c-benchmarks/report/" target="_blank" rel="noopener noreferrer">Xeon Max 9470C Benchmarks</a></p><div><span>© 2026 东云 / Shinonome</span><span>更新 <time datetime="2026-11-02">2026.11.02</time></span><a href="#top">返回顶部 ↑</a></div></footer>
+</div>
+</body>
 </html>
