@@ -57,10 +57,10 @@
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@type": "CreativeWork",
-            "name": "AI Video Harness",
-            "description": "以 TU22 为案例的 Blender 预演与视频生成实验，检查主体关系、动作时序与运镜要求的保留情况。",
-            "url": "https://portfolio.shinonome.xyz/#ai-video"
+            "@type": "SoftwareSourceCode",
+            "name": "Blender Asset Workflow",
+            "description": "面向建模 Agent 的分阶段工作流；我组织几何规划、独立视觉检查与导出验证。",
+            "url": "https://github.com/2409324124/blender-asset-workflow-skill"
           }
         },
         {
@@ -117,10 +117,10 @@
           "@type": "ListItem",
           "position": 7,
           "item": {
-            "@type": "SoftwareSourceCode",
-            "name": "Blender Asset Workflow",
-            "description": "面向建模 Agent 的分阶段工作流；我组织几何规划、独立视觉检查与导出验证。",
-            "url": "https://github.com/2409324124/blender-asset-workflow-skill"
+            "@type": "CreativeWork",
+            "name": "AI Video Harness",
+            "description": "以 TU22 为案例的 Blender 预演与视频生成实验，检查主体关系、动作时序与运镜要求的保留情况。",
+            "url": "https://portfolio.shinonome.xyz/#ai-video"
           }
         },
         {
@@ -158,16 +158,16 @@
 <header class="archive-header">
 <div class="masthead"><h1>东云 / Shinonome</h1><span class="masthead-mark" aria-hidden="true">[ WORK / INDEX ]</span></div>
 <p class="archive-subtitle">Agent Engineering <span aria-hidden="true">·</span> Evaluation</p>
-<nav class="archive-nav" aria-label="站点导航"><a href="https://shinonome.xyz/">返回桌面</a><a href="#ai-video">AI 视频</a><a href="#open-source">开源贡献</a><a href="#benchmarks">Benchmark</a><a href="#blender-workflow">场景建模</a><a href="https://bbs.shinonome.xyz/">东云通信局</a></nav>
+<nav class="archive-nav" aria-label="站点导航"><a href="https://shinonome.xyz/">返回桌面</a><a href="#blender-workflow">场景建模</a><a href="#open-source">开源贡献</a><a href="#benchmarks">Benchmark</a><a href="#ai-video">AI 视频</a><a href="https://bbs.shinonome.xyz/">东云通信局</a></nav>
 </header>
 <div class="portal-grid">
 <aside class="sidebar" aria-label="作品目录">
 <nav class="portal-panel directory-panel" aria-label="页内目录"><h2 class="panel-title">DIRECTORY / 目录</h2>
 <div class="panel-body directory-tree">
-<a href="#ai-video">AI Video Harness</a>
+<a href="#blender-workflow">Blender 工作流</a>
 <details open><summary>开源贡献</summary><a href="#backlot">Backlot</a><a href="#nanocoder">Nanocoder</a><a href="#tracekit">Tracekit</a></details>
 <details open><summary>Coding Benchmark</summary><a href="#powershell">PowerShell</a><a href="#shellsem">ShellSem-Bench</a></details>
-<a href="#blender-workflow">Blender 工作流</a>
+<a href="#ai-video">AI Video Harness</a>
 <a href="#model-lab">Qwen SFT Lab</a><a href="#games">TU22 / YAK-144</a><a href="#about">关于 / 写作</a>
 </div></nav>
 <section class="portal-panel side-note"><h2 class="panel-title panel-title-teal">FIELD NOTES</h2><div class="panel-body"><p>任务怎么定义？<br />工具怎样执行？<br />结果如何验证？</p><p class="muted">从执行轨迹到实际画面，分开检查“运行完成”和“满足要求”。</p><a href="https://github.com/2409324124" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></section>
@@ -175,60 +175,7 @@
 </aside>
 <main id="main-content" class="main-column">
 <section class="portal-panel welcome-panel" aria-labelledby="welcome-title"><h2 class="panel-title" id="welcome-title">WORK / 实验与实践</h2><div class="panel-body"><p class="intro">我参与 Coding Agent 开发，也为它设计评测。</p><p>从终端工具的计划执行与错误反馈，到 Windows／Bash 任务评测，再到建模、视频和游戏开发，下面是我做过的工作、遇到的问题和留下的产物。</p></div></section>
-<section class="portal-panel media-section" id="ai-video"><h2 class="panel-title">01 / AI Video Harness</h2><div class="panel-body">
-<h3 class="section-heading">场景理解与运镜控制</h3>
-<p>这是以 TU22 为案例的 Blender 预演与 AI 视频生成实验。我想观察视频模型能否保留给定的主体关系、动作时序和运镜要求。</p>
-<p>我将场景、主体动作和镜头要求转成可执行的 Blender 预演，再接入视频生成模型，组织生成任务与重试、保存输入版本，并检查生成视频中的双机关系、导弹离架和镜头交接。</p>
-<div class="video-grid">
-<div class="video-example">
-<h4 id="render-label">Blender 场景与渲染<small>20s · 720p</small></h4>
-<video id="render-video" data-project-video controls playsinline preload="none" width="1280" height="720" poster="./assets/tu22-blender-poster.webp" aria-labelledby="render-label" aria-describedby="render-video-error"><source src="./assets/tu22-blender-latest.mp4" type="video/mp4" />浏览器无法播放此视频，请使用下方直接视频链接。</video>
-<p>从空间、主体动作到相机路径，显式构建可检查的三维场景。</p><p id="render-video-error" class="media-error" role="status" hidden>视频加载失败，请检查网络或打开下方视频链接重试。</p>
-<a href="./assets/tu22-blender-latest.mp4" target="_blank" rel="noopener noreferrer">打开视频 ↗</a></div>
-<div class="video-example">
-<h4 id="api-label">视频模型生成结果<small>10s · 720p</small></h4>
-<video id="api-video" data-project-video controls playsinline preload="none" width="1280" height="720" poster="./assets/tu22-api-poster.webp" aria-labelledby="api-label" aria-describedby="api-video-error"><source src="./assets/tu22-api-latest.mp4" type="video/mp4" />浏览器无法播放此视频，请使用下方直接视频链接。</video>
-<p>观察生成模型如何重现双机飞行、导弹离架与镜头运动。</p><p id="api-video-error" class="media-error" role="status" hidden>视频加载失败，请检查网络或打开下方视频链接重试。</p>
-<a href="./assets/tu22-api-latest.mp4" target="_blank" rel="noopener noreferrer">打开视频 ↗</a></div>
-</div>
-<p class="version-note">两侧展示各路线的最新产物，不是同版本输入输出的逐帧 A/B 对照。</p>
-<ol class="workflow-line" aria-label="Harness 工作流程"><li>输入版本核验</li><li>任务与重试管理</li><li>产物检查</li><li>独立视觉复核</li></ol>
-<dl class="observation-list"><div><dt>内容理解</dt><dd>双机关系、挂载及导弹离架是否保持。</dd></div><div><dt>运镜遵从</dt><dd>掠镜、跟随、主体交接与拉远是否符合意图。</dd></div><div><dt>时序一致性</dt><dd>运动中是否出现形变、漂移或动作断裂。</dd></div></dl>
-<details class="experiment-details"><summary>实验来源与检查方式</summary><div>
-<p>渲染侧为 2026-10-30 的 skin-v6 完整预览（20 秒、30fps）；API 侧为 2026-10-27 的 wan3.0-video 双镜头剪辑（10 秒、30fps）。API 飞行镜头使用经检查的 ComfyUI 深度控制小样作为参考，发射镜头使用已认可的 Blender v3 片段，并非左侧的新渲染版本。</p>
-<p>固定输入版本并记录哈希，保存任务、候选及帧映射；将文件解码、画面检查和用户验收分开。API 片是尚未加入后续蓝焰合成的剪辑，20 秒渲染仍为质感预览。本例展示工作流与观察方法，不给出未经验证的通用能力评分。</p>
-<p class="entry-links"><a href="./assets/tu22-api-reference-comparison.mp4" target="_blank" rel="noopener noreferrer">打开该轮参考与生成结果对照 ↗</a></p>
-<p class="media-credits">渲染片声音：unfa「<a href="https://freesound.org/people/unfa/sounds/168079/" target="_blank" rel="noopener noreferrer">Jet Flyby 1 ↗</a>」、Felix Blume「<a href="https://freesound.org/people/felix.blume/sounds/613855/" target="_blank" rel="noopener noreferrer">Rocket Launch Rumble ↗</a>」（CC0），以及 U.S. Navy / Tomas Valdes「<a href="https://www.dvidshub.net/video/943751/phalanx-close-weapon-system-live-fire" target="_blank" rel="noopener noreferrer">Phalanx Live Fire ↗</a>」（Public Domain）；其余为原创程序合成。The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.</p>
-</div></details>
-</div></section>
-<section class="portal-panel" id="open-source"><h2 class="panel-title">02 / 开源贡献</h2><div class="project-list"><article class="project-entry" id="backlot">
-<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/backlot-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Backlot</h3><span class="entry-kind">Agent 外部 API 仿真环境</span></div></div>
-<p>Backlot 为 Agent 提供外部 API 的仿真环境。如果认证、错误响应或限流行为与真实接口不同，同一任务在两边可能得到不同结果。</p>
-<p>我对照真实 GitHub REST API，修复 Basic 凭据识别、认证顺序、错误响应及限流行为，并修复 Slack 广播消息行为。</p><p class="evidence">PR #1038：371 个对照场景，修复 108 个原有差异；该组未发现新增回归。</p><p class="entry-links"><a href="https://github.com/brekkylab/backlot/pull/1038" target="_blank" rel="noopener noreferrer">GitHub API 修复 ↗</a>
-<a href="https://github.com/brekkylab/backlot/pull/1151" target="_blank" rel="noopener noreferrer">Slack 行为修复 ↗</a>
-<a href="https://github.com/brekkylab/backlot" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article>
-<article class="project-entry" id="nanocoder">
-<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/nanocoder-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Nanocoder</h3><span class="entry-kind">开源、本地优先的终端 Coding Agent</span></div></div>
-<p>Nanocoder 支持接入本地模型和多种模型服务，在终端中完成代码任务。我的贡献主要围绕长程任务的计划执行，以及修改代码后的错误反馈。</p>
-<p>为了让任务从计划、审批持续推进到执行和验收，我主导了完整 Plan Mode 建设，支持 CLI、Headless 和 VS Code 之间的任务延续与会话恢复。另外实现文件编辑后的自动 LSP 诊断，将错误、警告和位置反馈给下一轮推理，让 Agent 据此修复并复验。</p><p class="evidence">Plan Mode #826、LSP #620 已合入；截至 2026-11-01，累计 5 个上游 PR 获合并。</p><p class="entry-links"><a href="https://github.com/Nano-Collective/nanocoder/pull/826" target="_blank" rel="noopener noreferrer">Plan Mode #826 ↗</a>
-<a href="https://github.com/Nano-Collective/nanocoder/pull/620" target="_blank" rel="noopener noreferrer">LSP #620 ↗</a>
-<a href="https://github.com/Nano-Collective/nanocoder" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article>
-<article class="project-entry" id="tracekit">
-<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/tracekit-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Tracekit</h3><span class="entry-kind">Agent 执行记录与校验工具</span></div></div>
-<p>Tracekit 记录 Agent 的工具调用与策略判断，并提供可核验的执行记录。我参与的是 Qwen Code 接入中的用户输入归因修复。</p>
-<p>Qwen Code 的工具结果、Hook 续写和展开文件内容可能被误记为用户指令，影响后续对执行过程与用户约束的判断。我通过 <code>submitted_prompt</code> 区分真实提交，修复记录与约束提取的来源，并用自动化测试和真实 CLI／TUI 操作做前后对照验证。</p><p class="entry-links"><a href="https://github.com/Cygnux-Labs/Tracekit/pull/417" target="_blank" rel="noopener noreferrer">已合入 PR #417 ↗</a>
-<a href="https://github.com/Cygnux-Labs/Tracekit" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article></div></section>
-<section class="portal-panel" id="benchmarks"><h2 class="panel-title">03 / Coding Benchmark</h2><div class="project-list"><article class="project-entry" id="powershell">
-<div class="entry-heading"><h3>Windows PowerShell Benchmark</h3><span class="entry-kind">真实 Windows 环境下的 Coding Agent 评测</span></div>
-<p>这套评测检查 Agent 在真实 Windows 环境中能否完成 PowerShell 任务。编码、特殊路径和退出码等问题，需要通过实际执行和最终状态来判断。</p>
-<p>我用 KVM / QEMU 搭建 Windows Server 2025 环境，为 PowerShell 5.1 设计五级任务，进一步覆盖有界并发与事务部署；将 Runner、过程 Judge 和隐藏机器验证分开，留存执行轨迹与最终状态。</p><p class="evidence">5 模型 × 5 题，共 25 次有效运行；该矩阵基础设施失败为 0，不等于任务全部通过。</p><p class="entry-links"><a href="https://powershell.shinonome.xyz/" target="_blank" rel="noopener noreferrer">查看评测展示 ↗</a>
-<a href="https://github.com/2409324124/windows-powershell-benchmark-poc" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p></article>
-<article class="project-entry" id="shellsem">
-<div class="entry-heading"><h3>ShellSem-Bench</h3><span class="entry-kind">Bash 任务评测与 Harness 故障归因</span></div>
-<p>ShellSem-Bench 用 Bash 任务和隐藏场景检查模型提交。一次运行失败，既可能来自模型，也可能来自承载它的 Harness（运行与评测框架），需要分开归因。</p>
-<p>我设计任务与隐藏场景，在 Docker 中隔离生成和判分，分别记录生成异常与提交功能结果。后续两题裸模型 / Pi 深测对照中，我结合执行记录定位上下文压缩及僵尸进程耗尽 PID 的问题，修正配置与容器进程回收。</p><p class="evidence">五题、每题 6 个隐藏场景；两模型共 10 次初版 smoke 生成。后续两题深测与初版 smoke 的实验范围分别记录。</p><p class="entry-links"><a href="https://github.com/2409324124/shellsem-bench/blob/codex/smoke-v0.1.0/reports/model-comparison-summary-2026-09-14.md" target="_blank" rel="noopener noreferrer">对照报告 ↗</a>
-<a href="https://github.com/2409324124/shellsem-bench" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p></article></div></section>
-<section class="portal-panel" id="blender-workflow"><h2 class="panel-title">04 / Blender Asset Workflow</h2><div class="panel-body">
+<section class="portal-panel" id="blender-workflow"><h2 class="panel-title">01 / Blender Asset Workflow</h2><div class="panel-body">
 <h3 class="section-heading">场景建模与独立质量验证</h3>
 <p>Blender Asset Workflow 是面向建模 Agent 的开源工作流。复杂场景需要逐步检查几何与画面，局部修复也需要保护已经认可的部分。</p>
 <p>我把建模拆为 Geometry Planning、Blockout、白模预览和局部精修，明确各阶段输入、产物与验收条件；使用独立推理上下文检查实际画面，并通过有限轮次的修复与复验保护已认可的几何基线。</p>
@@ -263,6 +210,59 @@
 <details class="aircraft-details"><summary>飞机资产：轮廓与白模</summary><div class="aircraft-grid">
 <a href="./assets/f22-three-view.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/f22-three-view.webp" alt="F-22 已通过的轮廓三视图，展示俯视、侧视与正视结构" width="1600" height="1098" loading="lazy" decoding="async" /></a>
 <a href="./assets/aircraft-parade.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/aircraft-parade.webp" alt="六架飞机 Blender 白模的斜俯视合影" width="1600" height="1200" loading="lazy" decoding="async" /></a>
+</div></details>
+</div></section>
+<section class="portal-panel" id="open-source"><h2 class="panel-title">02 / 开源贡献</h2><div class="project-list"><article class="project-entry" id="backlot">
+<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/backlot-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Backlot</h3><span class="entry-kind">Agent 外部 API 仿真环境</span></div></div>
+<p>Backlot 为 Agent 提供外部 API 的仿真环境。如果认证、错误响应或限流行为与真实接口不同，同一任务在两边可能得到不同结果。</p>
+<p>我对照真实 GitHub REST API，修复 Basic 凭据识别、认证顺序、错误响应及限流行为，并修复 Slack 广播消息行为。</p><p class="evidence">PR #1038：371 个对照场景，修复 108 个原有差异；该组未发现新增回归。</p><p class="entry-links"><a href="https://github.com/brekkylab/backlot/pull/1038" target="_blank" rel="noopener noreferrer">GitHub API 修复 ↗</a>
+<a href="https://github.com/brekkylab/backlot/pull/1151" target="_blank" rel="noopener noreferrer">Slack 行为修复 ↗</a>
+<a href="https://github.com/brekkylab/backlot" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article>
+<article class="project-entry" id="nanocoder">
+<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/nanocoder-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Nanocoder</h3><span class="entry-kind">开源、本地优先的终端 Coding Agent</span></div></div>
+<p>Nanocoder 支持接入本地模型和多种模型服务，在终端中完成代码任务。我的贡献主要围绕长程任务的计划执行，以及修改代码后的错误反馈。</p>
+<p>为了让任务从计划、审批持续推进到执行和验收，我主导了完整 Plan Mode 建设，支持 CLI、Headless 和 VS Code 之间的任务延续与会话恢复。另外实现文件编辑后的自动 LSP 诊断，将错误、警告和位置反馈给下一轮推理，让 Agent 据此修复并复验。</p><p class="evidence">Plan Mode #826、LSP #620 已合入；截至 2026-11-01，累计 5 个上游 PR 获合并。</p><p class="entry-links"><a href="https://github.com/Nano-Collective/nanocoder/pull/826" target="_blank" rel="noopener noreferrer">Plan Mode #826 ↗</a>
+<a href="https://github.com/Nano-Collective/nanocoder/pull/620" target="_blank" rel="noopener noreferrer">LSP #620 ↗</a>
+<a href="https://github.com/Nano-Collective/nanocoder" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article>
+<article class="project-entry" id="tracekit">
+<div class="entry-heading entry-heading-with-icon"><img class="project-icon" src="./assets/tracekit-icon.png" alt="" width="48" height="48" loading="lazy" decoding="async" /><div><h3>Tracekit</h3><span class="entry-kind">Agent 执行记录与校验工具</span></div></div>
+<p>Tracekit 记录 Agent 的工具调用与策略判断，并提供可核验的执行记录。我参与的是 Qwen Code 接入中的用户输入归因修复。</p>
+<p>Qwen Code 的工具结果、Hook 续写和展开文件内容可能被误记为用户指令，影响后续对执行过程与用户约束的判断。我通过 <code>submitted_prompt</code> 区分真实提交，修复记录与约束提取的来源，并用自动化测试和真实 CLI／TUI 操作做前后对照验证。</p><p class="entry-links"><a href="https://github.com/Cygnux-Labs/Tracekit/pull/417" target="_blank" rel="noopener noreferrer">已合入 PR #417 ↗</a>
+<a href="https://github.com/Cygnux-Labs/Tracekit" target="_blank" rel="noopener noreferrer">项目源码 ↗</a></p></article></div></section>
+<section class="portal-panel" id="benchmarks"><h2 class="panel-title">03 / Coding Benchmark</h2><div class="project-list"><article class="project-entry" id="powershell">
+<div class="entry-heading"><h3>Windows PowerShell Benchmark</h3><span class="entry-kind">真实 Windows 环境下的 Coding Agent 评测</span></div>
+<p>这套评测检查 Agent 在真实 Windows 环境中能否完成 PowerShell 任务。编码、特殊路径和退出码等问题，需要通过实际执行和最终状态来判断。</p>
+<p>我用 KVM / QEMU 搭建 Windows Server 2025 环境，为 PowerShell 5.1 设计五级任务，进一步覆盖有界并发与事务部署；将 Runner、过程 Judge 和隐藏机器验证分开，留存执行轨迹与最终状态。</p><p class="evidence">5 模型 × 5 题，共 25 次有效运行；该矩阵基础设施失败为 0，不等于任务全部通过。</p><p class="entry-links"><a href="https://powershell.shinonome.xyz/" target="_blank" rel="noopener noreferrer">查看评测展示 ↗</a>
+<a href="https://github.com/2409324124/windows-powershell-benchmark-poc" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p></article>
+<article class="project-entry" id="shellsem">
+<div class="entry-heading"><h3>ShellSem-Bench</h3><span class="entry-kind">Bash 任务评测与 Harness 故障归因</span></div>
+<p>ShellSem-Bench 用 Bash 任务和隐藏场景检查模型提交。一次运行失败，既可能来自模型，也可能来自承载它的 Harness（运行与评测框架），需要分开归因。</p>
+<p>我设计任务与隐藏场景，在 Docker 中隔离生成和判分，分别记录生成异常与提交功能结果。后续两题裸模型 / Pi 深测对照中，我结合执行记录定位上下文压缩及僵尸进程耗尽 PID 的问题，修正配置与容器进程回收。</p><p class="evidence">五题、每题 6 个隐藏场景；两模型共 10 次初版 smoke 生成。后续两题深测与初版 smoke 的实验范围分别记录。</p><p class="entry-links"><a href="https://github.com/2409324124/shellsem-bench/blob/codex/smoke-v0.1.0/reports/model-comparison-summary-2026-09-14.md" target="_blank" rel="noopener noreferrer">对照报告 ↗</a>
+<a href="https://github.com/2409324124/shellsem-bench" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p></article></div></section>
+<section class="portal-panel media-section" id="ai-video"><h2 class="panel-title">04 / AI Video Harness</h2><div class="panel-body">
+<h3 class="section-heading">场景理解与运镜控制</h3>
+<p>这是以 TU22 为案例的 Blender 预演与 AI 视频生成实验。我想观察视频模型能否保留给定的主体关系、动作时序和运镜要求。</p>
+<p>我将场景、主体动作和镜头要求转成可执行的 Blender 预演，再接入视频生成模型，组织生成任务与重试、保存输入版本，并检查生成视频中的双机关系、导弹离架和镜头交接。</p>
+<div class="video-grid">
+<div class="video-example">
+<h4 id="render-label">Blender 场景与渲染<small>20s · 720p</small></h4>
+<video id="render-video" data-project-video controls playsinline preload="none" width="1280" height="720" poster="./assets/tu22-blender-poster.webp" aria-labelledby="render-label" aria-describedby="render-video-error"><source src="./assets/tu22-blender-latest.mp4" type="video/mp4" />浏览器无法播放此视频，请使用下方直接视频链接。</video>
+<p>从空间、主体动作到相机路径，显式构建可检查的三维场景。</p><p id="render-video-error" class="media-error" role="status" hidden>视频加载失败，请检查网络或打开下方视频链接重试。</p>
+<a href="./assets/tu22-blender-latest.mp4" target="_blank" rel="noopener noreferrer">打开视频 ↗</a></div>
+<div class="video-example">
+<h4 id="api-label">视频模型生成结果<small>10s · 720p</small></h4>
+<video id="api-video" data-project-video controls playsinline preload="none" width="1280" height="720" poster="./assets/tu22-api-poster.webp" aria-labelledby="api-label" aria-describedby="api-video-error"><source src="./assets/tu22-api-latest.mp4" type="video/mp4" />浏览器无法播放此视频，请使用下方直接视频链接。</video>
+<p>观察生成模型如何重现双机飞行、导弹离架与镜头运动。</p><p id="api-video-error" class="media-error" role="status" hidden>视频加载失败，请检查网络或打开下方视频链接重试。</p>
+<a href="./assets/tu22-api-latest.mp4" target="_blank" rel="noopener noreferrer">打开视频 ↗</a></div>
+</div>
+<p class="version-note">两侧展示各路线的最新产物，不是同版本输入输出的逐帧 A/B 对照。</p>
+<ol class="workflow-line" aria-label="Harness 工作流程"><li>输入版本核验</li><li>任务与重试管理</li><li>产物检查</li><li>独立视觉复核</li></ol>
+<dl class="observation-list"><div><dt>内容理解</dt><dd>双机关系、挂载及导弹离架是否保持。</dd></div><div><dt>运镜遵从</dt><dd>掠镜、跟随、主体交接与拉远是否符合意图。</dd></div><div><dt>时序一致性</dt><dd>运动中是否出现形变、漂移或动作断裂。</dd></div></dl>
+<details class="experiment-details"><summary>实验来源与检查方式</summary><div>
+<p>渲染侧为 2026-10-30 的 skin-v6 完整预览（20 秒、30fps）；API 侧为 2026-10-27 的 wan3.0-video 双镜头剪辑（10 秒、30fps）。API 飞行镜头使用经检查的 ComfyUI 深度控制小样作为参考，发射镜头使用已认可的 Blender v3 片段，并非左侧的新渲染版本。</p>
+<p>固定输入版本并记录哈希，保存任务、候选及帧映射；将文件解码、画面检查和用户验收分开。API 片是尚未加入后续蓝焰合成的剪辑，20 秒渲染仍为质感预览。本例展示工作流与观察方法，不给出未经验证的通用能力评分。</p>
+<p class="entry-links"><a href="./assets/tu22-api-reference-comparison.mp4" target="_blank" rel="noopener noreferrer">打开该轮参考与生成结果对照 ↗</a></p>
+<p class="media-credits">渲染片声音：unfa「<a href="https://freesound.org/people/unfa/sounds/168079/" target="_blank" rel="noopener noreferrer">Jet Flyby 1 ↗</a>」、Felix Blume「<a href="https://freesound.org/people/felix.blume/sounds/613855/" target="_blank" rel="noopener noreferrer">Rocket Launch Rumble ↗</a>」（CC0），以及 U.S. Navy / Tomas Valdes「<a href="https://www.dvidshub.net/video/943751/phalanx-close-weapon-system-live-fire" target="_blank" rel="noopener noreferrer">Phalanx Live Fire ↗</a>」（Public Domain）；其余为原创程序合成。The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.</p>
 </div></details>
 </div></section>
 <section class="portal-panel" id="model-lab"><h2 class="panel-title">05 / Qwen SFT Lab</h2><div class="panel-body">

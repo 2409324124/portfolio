@@ -7,7 +7,7 @@ const copy = html.replace(/<script\b[\s\S]*?<\/script>/g, " ").replace(/<[^>]+>/
 
 test("portfolio orders current engineering evidence and removes obsolete projects", () => {
   let cursor = -1;
-  for (const id of ["ai-video", "open-source", "benchmarks", "blender-workflow", "model-lab", "games"]) {
+  for (const id of ["blender-workflow", "open-source", "benchmarks", "ai-video", "model-lab", "games"]) {
     const position = html.indexOf('id="' + id + '"');
     assert.ok(position > cursor, id + " should follow the previous section");
     cursor = position;
@@ -18,15 +18,17 @@ test("portfolio orders current engineering evidence and removes obsolete project
   assert.doesNotMatch(html, /href="[^"]*github\.com\/2409324124\/blender-ai-video/);
 });
 
-test("AI Video Harness leads navigation, section numbering and structured projects", () => {
+test("scene modeling leads while AI Video Harness occupies section four", () => {
   const directory = html.match(/<div class="panel-body directory-tree">([\s\S]*?)<\/div>/)[1];
-  assert.equal(directory.match(/href="(#[^"]+)"/)[1], '#ai-video');
+  assert.equal(directory.match(/href="(#[^"]+)"/)[1], '#blender-workflow');
   const nav = html.match(/<nav class="archive-nav"[^>]*>([\s\S]*?)<\/nav>/)[1];
-  assert.equal(nav.match(/href="(#[^"]+)"/)[1], '#ai-video');
+  assert.equal(nav.match(/href="(#[^"]+)"/)[1], '#blender-workflow');
   const sections = [...html.matchAll(/<section\b[^>]*id="([^"]+)"[^>]*><h2 class="panel-title">(\d{2}) \/ /g)];
-  assert.deepEqual(sections.map(m => [m[1], m[2]]), [['ai-video','01'], ['open-source','02'], ['benchmarks','03'], ['blender-workflow','04'], ['model-lab','05'], ['games','06']]);
+  assert.deepEqual(sections.map(m => [m[1], m[2]]), [['blender-workflow','01'], ['open-source','02'], ['benchmarks','03'], ['ai-video','04'], ['model-lab','05'], ['games','06']]);
   const graph = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
-  assert.equal(graph.find(item => item['@type'] === 'ItemList').itemListElement[0].item.name, 'AI Video Harness');
+  const items = graph.find(item => item['@type'] === 'ItemList').itemListElement;
+  assert.equal(items[0].item.name, 'Blender Asset Workflow');
+  assert.equal(items[6].item.name, 'AI Video Harness');
 });
 
 test("writing and legacy destinations remain without legacy project cards", () => {
@@ -39,7 +41,7 @@ test("native video players use local latest media, accessible errors, and direct
   const videos = [...html.matchAll(/<video\b([^>]*)>([\s\S]*?)<\/video>/g)];
   assert.equal(videos.length, 3);
   for (const [i, id] of ["render-video", "api-video", "modeling-video"].entries()) {
-    const [, attributes, body] = videos[i];
+    const [, attributes, body] = videos.find(([, attributes]) => attributes.includes('id="' + id + '"'));
     const name = ["tu22-blender-latest", "tu22-api-latest", "rivet-modeling-process"][i];
     const poster = ["tu22-blender-poster.webp", "tu22-api-poster.webp", "rivet-modeling-poster.webp"][i];
     for (const attribute of ['id="' + id + '"', "data-project-video", "controls", "playsinline", 'preload="none"', i === 2 ? 'width="1568"' : 'width="1280"', i === 2 ? 'height="1080"' : 'height="720"']) assert.ok(attributes.includes(attribute), attribute);
